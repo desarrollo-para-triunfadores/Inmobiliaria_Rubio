@@ -16,7 +16,7 @@ use Carbon\Carbon;
 use App\Http\Requests\ambienteRequestCreate;
 use App\Http\Requests\ambienteRequestEdit;
 
-class AMbientesController extends Controller
+class AmbientesController extends Controller
 {
     public function __construct()
     {
@@ -31,11 +31,10 @@ class AMbientesController extends Controller
     public function index(Request $request)
     {
         $ambientes = Ambiente::all();
-        $paises = Pais::all()->lists('nombre','id');
         if ($ambientes->count()==0){ // la funcion count te devuelve la cantidad de registros contenidos en la cadena
-            return view('admin.ambientes.sinRegistros')->with('paises', $paises); //se devuelve la vista para crear un registro
+            return view('admin.ambientes.sinRegistros')->with('ambientes', $ambientes); //se devuelve la vista para crear un registro
         } else {
-            return view('admin.ambientes.tabla')->with('ambientes', $ambientes)->with('paises', $paises); // se devuelven los registros
+            return view('admin.ambientes.tabla')->with('ambientes', $ambientes)->with('ambientes', $ambientes); // se devuelven los registros
         }
     }
 
@@ -48,7 +47,6 @@ class AMbientesController extends Controller
     {        
         return view('admin.ambientes.create');
     }
-
 
 
     public function store(ambienteRequestCreate $request)

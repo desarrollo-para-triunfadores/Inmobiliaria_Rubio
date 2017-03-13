@@ -17,7 +17,7 @@ class AddCaracteristicasTable extends Migration
             $table->string('nombre');
             $table->integer('tipo_id')->unsigned();
             $table->foreign('tipo_id')->references('id')->on('tipo')->onDelete('cascade');
-            $table->string('descripcion');
+            $table->string('descripcion',500)->nullable();
 
             $table->timestamps();
         });

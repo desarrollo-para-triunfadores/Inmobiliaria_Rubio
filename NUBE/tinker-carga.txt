@@ -83,6 +83,31 @@ $edificio = ['nombre'=>'Belgrano']
 $edificio = ['nombre'=>'Sarmiento']
 				\App\Edificio::create($edificio);	
 
+$ambiente = ['nombre' => 'Dormitorio', 'superficie' => '', 'descripcion' => ''] 
+				\App\Ambiente::create($ambiente);
+$ambiente = ['nombre' => 'Baño', 'superficie' => '', 'descripcion' => ''] 
+				\App\Ambiente::create($ambiente);
+$ambiente = ['nombre' => 'Lobby', 'superficie' => '', 'descripcion' => ''] 
+				\App\Ambiente::create($ambiente);
+$ambiente = ['nombre' => 'Living', 'superficie' => '', 'descripcion' => ''] 
+				\App\Ambiente::create($ambiente);
+$ambiente = ['nombre' => 'Comedor', 'superficie' => '', 'descripcion' => ''] 
+				\App\Ambiente::create($ambiente);
+$ambiente = ['nombre' => 'Terraza', 'superficie' => '', 'descripcion' => ''] 
+				\App\Ambiente::create($ambiente);
+$ambiente = ['nombre' => 'Cocina', 'superficie' => '', 'descripcion' => ''] 
+				\App\Ambiente::create($ambiente);
+$ambiente = ['nombre' => 'Cochera', 'superficie' => '', 'descripcion' => ''] 
+				\App\Ambiente::create($ambiente);
+$ambiente = ['nombre' => 'Patio Trasero', 'superficie' => '', 'descripcion' => ''] 
+				\App\Ambiente::create($ambiente);
+$ambiente = ['nombre' => 'Patio Frontal', 'superficie' => '', 'descripcion' => ''] 
+				\App\Ambiente::create($ambiente);
+
+
+
+
+
 $inquilino = ['nombre'=>'Juan Pablo', 'apellido'=>'Caceres', 'dni'=>'34478385', 'fecha_nac'=>'10/05/1989', 'telefono'=>'34478385', 'descripcion'=>'']
 				\App\Inquilino::create($inquilino);
 $inquilino = ['nombre'=>'Alexander Daniel', 'apellido'=>'Gomez', 'dni'=>'36778385', 'fecha_nac'=>'13/08/1991', 'telefono'=>'34478546', 'descripcion'=>'']
