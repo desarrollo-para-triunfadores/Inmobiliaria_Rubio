@@ -1,15 +1,23 @@
-<link href="{{ asset('plantillas/gentellela-alela/production/css/bootstrap.min.css') }}"  rel="stylesheet">
-<link href="{{ asset('plantillas/gentellela-alela/production/fonts/css/font-awesome.min.css') }}"  rel="stylesheet">
-<link href="{{ asset('plantillas/gentellela-alela/production/css/animate.min.css') }}"  rel="stylesheet">
-<!-- Custom styling plus plugins -->
-<link href="{{ asset('plantillas/gentellela-alela/production/css/custom.css') }}"  rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="{{ asset('plantillas/gentellela-alela/production/css/maps/jquery-jvectormap-2.0.3.css') }}" />
-<link href="{{ asset('plantillas/gentellela-alela/production/css/icheck/flat/green.css') }}" rel="stylesheet" />
-<link href="{{ asset('plantillas/gentellela-alela/production/css/floatexamples.css') }}" rel="stylesheet" type="text/css" />
-
-<!--estilos de vista tabla.blade-->
-<link href="js/datatables/jquery.dataTables.min.css" rel="stylesheet" type="text/css" />
-<link href="js/datatables/buttons.bootstrap.min.css" rel="stylesheet" type="text/css" />
-<link href="js/datatables/fixedHeader.bootstrap.min.css" rel="stylesheet" type="text/css" />
-<link href="js/datatables/responsive.bootstrap.min.css" rel="stylesheet" type="text/css" />
-<link href="js/datatables/scroller.bootstrap.min.css" rel="stylesheet" type="text/css" />
+<!-- Bootstrap 3.3.6 -->
+<link rel="stylesheet" href="{{ asset('plantillas/LTE/bootstrap/css/bootstrap.min.css') }}"  >
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- Ionicons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+<!-- Theme style -->
+<link rel="stylesheet" href= "{{ asset('plantillas/LTE/dist/css/AdminLTE.min.css') }}" >
+<!-- AdminLTE Skins. Choose a skin from the css/skins
+     folder instead of downloading all of them to reduce the load. -->
+<link rel="stylesheet" href="{{ asset('plantillas/LTE/dist/css/skins/_all-skins.min.css') }}" >
+<!-- iCheck -->
+<link rel="stylesheet" href="{{ asset('plantillas/LTE/plugins/iCheck/flat/blue.css') }}" >
+<!-- Morris chart -->
+<link rel="stylesheet" href="{{ asset('plantillas/LTE/plugins/morris/morris.css') }}" >
+<!-- jvectormap -->
+<link rel="stylesheet" href="{{ asset('plantillas/LTE/plugins/jvectormap/jquery-jvectormap-1.2.2.css') }}" >
+<!-- Date Picker -->
+<link rel="stylesheet" href="{{ asset('plantillas/LTE/plugins/datepicker/datepicker3.css') }}" >
+<!-- Daterange picker -->
+<link rel="stylesheet" href="{{ asset('plantillas/LTE/plugins/daterangepicker/daterangepicker.css') }}" >
+<!-- bootstrap wysihtml5 - text editor -->
+<link rel="stylesheet" href="{{ asset('plantillas/LTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}" >

@@ -56,7 +56,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="assets/img/properties/property-06.jpg">
+                                <img alt="" src="{{ asset('plantillas/zoner/assets/img/properties/property-06.jpg') }}" >
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -90,7 +90,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="assets/img/properties/property-04.jpg">
+                                <img alt="" src="{{ asset('plantillas/zoner/assets/img/properties/property-04.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -124,7 +124,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="assets/img/properties/property-07.jpg">
+                                <img alt="" src="{{ asset('plantillas/zoner/assets/img/properties/property-07.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -158,7 +158,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="assets/img/properties/property-08.jpg">
+                                <img alt="" src="{{ asset('plantillas/zoner/assets/img/properties/property-08.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -214,7 +214,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="assets/img/properties/property-09.jpg">
+                                <img alt="" src="{{ asset('plantillas/zoner/assets/img/properties/property-09.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -248,7 +248,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="assets/img/properties/property-03.jpg">
+                                <img alt="" src="{{ asset('plantillas/zoner/assets/img/properties/property-03.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -282,7 +282,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="assets/img/properties/property-06.jpg">
+                                <img alt="" src="{{ asset('plantillas/zoner/assets/img/properties/property-06.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -316,7 +316,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="assets/img/properties/property-01.jpg">
+                                <img alt="" src="{{ asset('plantillas/zoner/assets/img/properties/property-01.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -352,7 +352,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="assets/img/properties/property-02.jpg">
+                                <img alt="" src="{{ asset('plantillas/zoner/assets/img/properties/property-02.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -386,7 +386,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="assets/img/properties/property-12.jpg">
+                                <img alt="" src="{{ asset('plantillas/zoner/assets/img/properties/property-12.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -420,7 +420,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="assets/img/properties/property-05.jpg">
+                                <img alt="" src="{{ asset('plantillas/zoner/assets/img/properties/property-05.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">
@@ -454,7 +454,7 @@
                     <div class="property">
                         <a href="property-detail.html">
                             <div class="property-image">
-                                <img alt="" src="assets/img/properties/property-10.jpg">
+                                <img alt="" src="{{ asset('plantillas/zoner/assets/img/properties/property-10.jpg')}}">
                             </div>
                             <div class="overlay">
                                 <div class="info">

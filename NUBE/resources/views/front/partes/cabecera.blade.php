@@ -1,7 +1,7 @@
 <div class="secondary-navigation">
     <div class="container">
         <div class="contact">
-            <figure><strong>Teléfono:</strong>+54 9 362 410-8530</figure>
+            <figure><strong>TelÃ©fono:</strong>+54-362410-8530</figure>
             <figure><strong>Email:</strong>inmobiliarianube@gmail.com</figure>
         </div>
         <div class="user-area">
