@@ -10,24 +10,24 @@
 <script type="text/javascript" src="{{ asset('plantillas/zoner/assets/js/jquery.vanillabox-0.1.5.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('plantillas/zoner/assets/js/retina-1.1.0.min.js') }}"></script>
 <script type="text/javascript" src="{{ asset('plantillas/zoner/assets/js/jshashtable-2.1_src.js') }}" ></script>
-<script type="text/javascript" src="{{ asset('plantillas/zonner/assets/js/jquery.numberformatter-1.2.3.js') }}"></script>
-<script type="text/javascript" src="{{ asset('plantillas/zonner/assets/js/tmpl.js') }}"></script>
-<script type="text/javascript" src="{{ asset('plantillas/zonner/assets/js/jquery.dependClass-0.1.js') }}"></script>
-<script type="text/javascript" src="{{ asset('plantillas/zonner/assets/js/draggable-0.1.js') }}"></script>
-<script type="text/javascript" src="{{ asset('plantillas/zonner/assets/js/jquery.slider.js') }}"></script>
-<script type="text/javascript" src="{{ asset('plantillas/zonner/assets/js/custom.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plantillas/zoner/assets/js/jquery.numberformatter-1.2.3.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plantillas/zoner/assets/js/tmpl.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plantillas/zoner/assets/js/jquery.dependClass-0.1.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plantillas/zoner/assets/js/draggable-0.1.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plantillas/zoner/assets/js/jquery.slider.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plantillas/zoner/assets/js/custom.js') }}"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<script type="text/javascript" src="{{ asset('plantillas/zonner/assets/js/markerwithlabel_packed.js') }}"></script>
-<script type="text/javascript" src="{{ asset('plantillas/zonner/assets/js/infobox.js') }}"></script>
-<script type="text/javascript" src="{{ asset('plantillas/zonner/assets/js/jquery.raty.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('plantillas/zonner/assets/js/jquery.magnific-popup.min.js') }}"></script>
-<script type="text/javascript" src="{{ asset('plantillas/zonner/assets/js/jquery.numberformatter-1.2.3.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plantillas/zoner/assets/js/markerwithlabel_packed.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plantillas/zoner/assets/js/infobox.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plantillas/zoner/assets/js/jquery.raty.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plantillas/zoner/assets/js/jquery.magnific-popup.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plantillas/zoner/assets/js/jquery.numberformatter-1.2.3.js') }}"></script>
 
-<script type="text/javascript" src="{{ asset('plantillas/zonner/assets/js/jquery.slider.js') }}"></script>
-<script type="text/javascript" src="{{ asset('plantillas/zonner/assets/js/jquery.fitvids.js') }}"></script>
-<script type="text/javascript" src="{{ asset('plantillas/zonner/assets/js/custom-map.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plantillas/zoner/assets/js/jquery.slider.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plantillas/zoner/assets/js/jquery.fitvids.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plantillas/zoner/assets/js/custom-map.js') }}"></script>
 <!--[if gt IE 8]>
-<script type="text/javascript" src="{{ asset('plantillas/zonner/assets/ie.js') }}"></script>
+<script type="text/javascript" src="{{ asset('plantillas/zoner/assets/ie.js') }}"></script>
 <![endif]-->
 <script>
     $(window).load(function(){

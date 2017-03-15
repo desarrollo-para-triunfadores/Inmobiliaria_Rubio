@@ -5,18 +5,18 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-3">
                         <article>
-                            <h3>About Us</h3>
+                            <h3>Quienes Somos</h3>
                             <p>Vel fermentum ipsum. Suspendisse quis molestie odio. Interdum et malesuada fames ac ante ipsum
                                 primis in faucibus. Quisque aliquet a metus in aliquet. Praesent ut turpis posuere, commodo odio
                                 id, ornare tortor
                             </p>
                             <hr>
-                            <a href="#" class="link-arrow">Read More</a>
+                            <a href="#" class="link-arrow">Saber Mas</a>
                         </article>
                     </div><!-- /.col-sm-3 -->
                     <div class="col-md-3 col-sm-3">
                         <article>
-                            <h3>Recent Properties</h3>
+                            <h3>Propiedades Recientes</h3>
                             <div class="property small">
                                 <a href="property-detail.html">
                                     <div class="property-image">
@@ -24,7 +24,7 @@
                                     </div>
                                 </a>
                                 <div class="info">
-                                    <a href="property-detail.html"><h4>2186 Rinehart Road</h4></a>
+                                    <a href="property-detail.html"><h4>2186 San Martin</h4></a>
                                     <figure>Doral, FL 33178 </figure>
                                     <div class="tag price">$ 72,000</div>
                                 </div>
@@ -36,8 +36,8 @@
                                     </div>
                                 </a>
                                 <div class="info">
-                                    <a href="property-detail.html"><h4>2479 Murphy Court</h4></a>
-                                    <figure>Minneapolis, MN 55402</figure>
+                                    <a href="property-detail.html"><h4>2479 Joaquin Sabina</h4></a>
+                                    <figure>Capiovi, Misiones</figure>
                                     <div class="tag price">$ 36,000</div>
                                 </div>
                             </div><!-- /.property -->
@@ -45,25 +45,24 @@
                     </div><!-- /.col-sm-3 -->
                     <div class="col-md-3 col-sm-3">
                         <article>
-                            <h3>Contact</h3>
+                            <h3>Contacto</h3>
                             <address>
-                                <strong>Your Company</strong><br>
-                                4877 Spruce Drive<br>
-                                West Newton, PA 15089
+                                <strong>Inmobiliaria NUBE</strong><br>
+                                Arturo Illia 1244<br>
+                                Resistencia, Chaco
                             </address>
-                            +1 (734) 123-4567<br>
+                            +54 (3624) 23-4567<br>
                             <a href="#">hello@example.com</a>
                         </article>
                     </div><!-- /.col-sm-3 -->
                     <div class="col-md-3 col-sm-3">
                         <article>
-                            <h3>Useful Links</h3>
+                            <h3>Sitios Web Utiles</h3>
                             <ul class="list-unstyled list-links">
-                                <li><a href="#">All Properties</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Login and Register Account</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Terms and Conditions</a></li>
+                                <li><a href="#">Municipalidad de Resistencia</a></li>
+                                <li><a href="#">AFIP</a></li>
+                                <li><a href="#">Rentas</a></li>
+                                <li><a href="#">Nuevo Banco del Chaco</a></li>
                             </ul>
                         </article>
                     </div><!-- /.col-sm-3 -->
@@ -73,7 +72,7 @@
         <aside id="footer-thumbnails" class="footer-thumbnails"></aside><!-- /#footer-thumbnails -->
         <aside id="footer-copyright">
             <div class="container">
-                <span>Copyright © 2013. All Rights Reserved.</span>
+                <span>NEA Soft © 2017</span>
                 <span class="pull-right"><a href="#page-top" class="roll">Ir hacia arriba</a></span>
             </div>
         </aside>

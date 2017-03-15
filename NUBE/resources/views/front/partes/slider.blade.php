@@ -13,7 +13,7 @@
                     <a href="property-detail.html" class="link-arrow">Read More</a>
                 </div>
             </div>
-            <img alt="" src="assets/img/slide-01.jpg">
+            <img alt="" src="{{ asset('plantillas/zoner/assets/img/slide-01.jpg')}}">
         </div>
         <div class="slide">
             <div class="container">
@@ -27,7 +27,7 @@
                     <a href="property-detail.html" class="link-arrow">Read More</a>
                 </div>
             </div>
-            <img alt="" src="assets/img/slide-02.jpg">
+            <img alt="" src="{{ asset('plantillas/zoner/assets/img/slide-02.jpg')}}">
         </div>
         <div class="slide">
             <div class="container">
@@ -41,7 +41,7 @@
                     <a href="property-detail.html" class="link-arrow">Read More</a>
                 </div>
             </div>
-            <img alt="" src="assets/img/slide-03.jpg">
+            <img alt="" src="{{ asset('plantillas/zoner/assets/img/slide-03.jpg')}}">
         </div>
     </div>
 </div>

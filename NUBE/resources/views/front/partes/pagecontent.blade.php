@@ -26,7 +26,7 @@
                     <div class="feature-box equal-height">
                         <figure class="icon"><i class="fa fa-users"></i></figure>
                         <aside class="description">
-                            <header><h3>14 Agents for Your Service</h3></header>
+                            <header><h3>Agentes</h3></header>
                             <p>Aliquam gravida magna et fringilla convallis. Pellentesque habitant morbi </p>
                             <a href="agents-listing.html" class="link-arrow">Read More</a>
                         </aside>
@@ -66,15 +66,15 @@
                                 </div>
                                 <ul class="additional-info">
                                     <li>
-                                        <header>Area:</header>
+                                        <header>Superficie:</header>
                                         <figure>240m<sup>2</sup></figure>
                                     </li>
                                     <li>
-                                        <header>Beds:</header>
+                                        <header>Habitaciones:</header>
                                         <figure>2</figure>
                                     </li>
                                     <li>
-                                        <header>Baths:</header>
+                                        <header>Baños:</header>
                                         <figure>2</figure>
                                     </li>
                                     <li>
@@ -100,15 +100,15 @@
                                 </div>
                                 <ul class="additional-info">
                                     <li>
-                                        <header>Area:</header>
+                                        <header>Superficie:</header>
                                         <figure>240m<sup>2</sup></figure>
                                     </li>
                                     <li>
-                                        <header>Beds:</header>
+                                        <header>Habitaciones:</header>
                                         <figure>3</figure>
                                     </li>
                                     <li>
-                                        <header>Baths:</header>
+                                        <header>Baños:</header>
                                         <figure>1</figure>
                                     </li>
                                     <li>
@@ -134,15 +134,15 @@
                                 </div>
                                 <ul class="additional-info">
                                     <li>
-                                        <header>Area:</header>
+                                        <header>Superficie:</header>
                                         <figure>240m<sup>2</sup></figure>
                                     </li>
                                     <li>
-                                        <header>Beds:</header>
+                                        <header>Habitaciones:</header>
                                         <figure>3</figure>
                                     </li>
                                     <li>
-                                        <header>Baths:</header>
+                                        <header>Baños:</header>
                                         <figure>1</figure>
                                     </li>
                                     <li>
@@ -168,15 +168,15 @@
                                 </div>
                                 <ul class="additional-info">
                                     <li>
-                                        <header>Area:</header>
+                                        <header>Superficie:</header>
                                         <figure>240m<sup>2</sup></figure>
                                     </li>
                                     <li>
-                                        <header>Beds:</header>
+                                        <header>Habitaciones:</header>
                                         <figure>3</figure>
                                     </li>
                                     <li>
-                                        <header>Baths:</header>
+                                        <header>Baños:</header>
                                         <figure>1</figure>
                                     </li>
                                     <li>
@@ -196,8 +196,8 @@
             <a href="submit.html">
                 <div class="banner">
                     <div class="wrapper">
-                        <span class="title">Do you want your property to be listed here?</span>
-                        <span class="submit">Submit it now! <i class="fa fa-plus-square"></i></span>
+                        <span class="title">Te gustaria que tu propiedad aparezca acá?</span>
+                        <span class="submit">Registrala ahora! <i class="fa fa-plus-square"></i></span>
                     </div>
                 </div><!-- /.banner-->
             </a>
@@ -207,7 +207,7 @@
         <div class="container">
             <header class="section-title">
                 <h2>New Properties for You</h2>
-                <a href="properties-listing.html" class="link-arrow">All Properties</a>
+                <a href="properties-listing.html" class="link-arrow">Todas las Propiedades</a>
             </header>
             <div class="row">
                 <div class="col-md-3 col-sm-6">
@@ -224,15 +224,15 @@
                                 </div>
                                 <ul class="additional-info">
                                     <li>
-                                        <header>Area:</header>
+                                        <header>Superficie:</header>
                                         <figure>240m<sup>2</sup></figure>
                                     </li>
                                     <li>
-                                        <header>Beds:</header>
+                                        <header>Habitaciones:</header>
                                         <figure>2</figure>
                                     </li>
                                     <li>
-                                        <header>Baths:</header>
+                                        <header>Baños:</header>
                                         <figure>2</figure>
                                     </li>
                                     <li>
@@ -258,15 +258,15 @@
                                 </div>
                                 <ul class="additional-info">
                                     <li>
-                                        <header>Area:</header>
+                                        <header>Superficie:</header>
                                         <figure>240m<sup>2</sup></figure>
                                     </li>
                                     <li>
-                                        <header>Beds:</header>
+                                        <header>Habitaciones:</header>
                                         <figure>3</figure>
                                     </li>
                                     <li>
-                                        <header>Baths:</header>
+                                        <header>Baños:</header>
                                         <figure>1</figure>
                                     </li>
                                     <li>
@@ -292,15 +292,15 @@
                                 </div>
                                 <ul class="additional-info">
                                     <li>
-                                        <header>Area:</header>
+                                        <header>Superficie:</header>
                                         <figure>240m<sup>2</sup></figure>
                                     </li>
                                     <li>
-                                        <header>Beds:</header>
+                                        <header>Habitaciones:</header>
                                         <figure>3</figure>
                                     </li>
                                     <li>
-                                        <header>Baths:</header>
+                                        <header>Baños:</header>
                                         <figure>1</figure>
                                     </li>
                                     <li>
@@ -326,15 +326,15 @@
                                 </div>
                                 <ul class="additional-info">
                                     <li>
-                                        <header>Area:</header>
+                                        <header>Superficie:</header>
                                         <figure>240m<sup>2</sup></figure>
                                     </li>
                                     <li>
-                                        <header>Beds:</header>
+                                        <header>Habitaciones:</header>
                                         <figure>3</figure>
                                     </li>
                                     <li>
-                                        <header>Baths:</header>
+                                        <header>Baños:</header>
                                         <figure>1</figure>
                                     </li>
                                     <li>
@@ -362,15 +362,15 @@
                                 </div>
                                 <ul class="additional-info">
                                     <li>
-                                        <header>Area:</header>
+                                        <header>Superficie:</header>
                                         <figure>280m<sup>2</sup></figure>
                                     </li>
                                     <li>
-                                        <header>Beds:</header>
+                                        <header>Habitaciones:</header>
                                         <figure>3</figure>
                                     </li>
                                     <li>
-                                        <header>Baths:</header>
+                                        <header>Baños:</header>
                                         <figure>2</figure>
                                     </li>
                                     <li>
@@ -396,15 +396,15 @@
                                 </div>
                                 <ul class="additional-info">
                                     <li>
-                                        <header>Area:</header>
+                                        <header>Superficie:</header>
                                         <figure>30m<sup>2</sup></figure>
                                     </li>
                                     <li>
-                                        <header>Beds:</header>
+                                        <header>Habitaciones:</header>
                                         <figure>1</figure>
                                     </li>
                                     <li>
-                                        <header>Baths:</header>
+                                        <header>Baños:</header>
                                         <figure>1</figure>
                                     </li>
                                     <li>
@@ -438,7 +438,7 @@
                                         <figure>3</figure>
                                     </li>
                                     <li>
-                                        <header>Ba�os:</header>
+                                        <header>Baños:</header>
                                         <figure>1</figure>
                                     </li>
                                     <li>
@@ -472,7 +472,7 @@
                                         <figure>3</figure>
                                     </li>
                                     <li>
-                                        <header>Ba�os:</header>
+                                        <header>Baños:</header>
                                         <figure>1</figure>
                                     </li>
                                     <li>
