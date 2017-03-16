@@ -1,0 +1,5 @@
+Personas (sin registrarse) notifican su interes en un inmueble via email
+	-Se genera una "oportunidad" en estado inicial, se persisten los datos del interesado
+
+Contrato a punto de finalizar:
+	-60 dias antes se notifica al inquilino y al propietario via email.
