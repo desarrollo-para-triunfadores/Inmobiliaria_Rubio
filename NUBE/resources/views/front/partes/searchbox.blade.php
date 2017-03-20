@@ -12,8 +12,8 @@
                             <div class="form-group">
                                 <select name="type">
                                     <option value="">Condición</option>
-                                    <option value="1">Rent</option>
-                                    <option value="2">Sale</option>
+                                    <option value="1">Alquiler</option>
+                                    <option value="2">Venta</option>
                                 </select>
                             </div><!-- /.form-group -->
                             <div class="form-group">

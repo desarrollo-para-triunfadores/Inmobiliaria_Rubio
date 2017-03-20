@@ -5,15 +5,15 @@
             <div class="container">
                 <div class="overlay">
                     <div class="info">
-                        <div class="tag price">$ 11,000</div>
-                        <h3>3398 Lodgeville Road</h3>
-                        <figure>Golden Valley, MN 55427</figure>
+                        <div class="tag price">$ 850,000</div>
+                        <h3>9 de Julio 429</h3>
+                        <figure>Resistencia, Chaco, AR</figure>
                     </div>
                     <hr>
-                    <a href="property-detail.html" class="link-arrow">Read More</a>
+                    <a href="property-detail.html" class="link-arrow">Ver mas</a>
                 </div>
             </div>
-            <img alt="" src="{{ asset('plantillas/zoner/assets/img/slide-01.jpg')}}">
+            <img alt="" src="{{ asset('plantillas/zoner/assets/img/slide-04.jpg')}}">
         </div>
         <div class="slide">
             <div class="container">
@@ -24,24 +24,24 @@
                         <figure>Chicago, IL 60610</figure>
                     </div>
                     <hr>
-                    <a href="property-detail.html" class="link-arrow">Read More</a>
+                    <a href="property-detail.html" class="link-arrow">Ver Más</a>
                 </div>
             </div>
-            <img alt="" src="{{ asset('plantillas/zoner/assets/img/slide-02.jpg')}}">
+            <img alt="" src="{{ asset('plantillas/zoner/assets/img/slide-01.jpg')}}">
         </div>
         <div class="slide">
             <div class="container">
                 <div class="overlay">
                     <div class="info">
                         <div class="tag price">$ 28,500</div>
-                        <h3>1866 Clement Street</h3>
-                        <figure>Atlanta, GA 30303</figure>
+                        <h3>San Andres 1244</h3>
+                        <figure>Garupamsterdam, Misiones, ARG 2303</figure>
                     </div>
                     <hr>
-                    <a href="property-detail.html" class="link-arrow">Read More</a>
+                    <a href="property-detail.html" class="link-arrow">Ver Más</a>
                 </div>
             </div>
-            <img alt="" src="{{ asset('plantillas/zoner/assets/img/slide-03.jpg')}}">
+            <img alt="" src="{{ asset('plantillas/zoner/assets/img/slide-05.jpg')}}">
         </div>
     </div>
 </div>

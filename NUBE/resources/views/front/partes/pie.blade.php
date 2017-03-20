@@ -6,9 +6,10 @@
                     <div class="col-md-3 col-sm-3">
                         <article>
                             <h3>Quienes Somos</h3>
-                            <p>Vel fermentum ipsum. Suspendisse quis molestie odio. Interdum et malesuada fames ac ante ipsum
-                                primis in faucibus. Quisque aliquet a metus in aliquet. Praesent ut turpis posuere, commodo odio
-                                id, ornare tortor
+                            <p>descripcion del negocio bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
+                                bla bla bla bla bla bla bla bla bla bla bla bla
+
                             </p>
                             <hr>
                             <a href="#" class="link-arrow">Saber Mas</a>
@@ -52,7 +53,7 @@
                                 Resistencia, Chaco
                             </address>
                             +54 (3624) 23-4567<br>
-                            <a href="#">hello@example.com</a>
+                            <a href="#">inmobiliariaNube@gmail.com</a>
                         </article>
                     </div><!-- /.col-sm-3 -->
                     <div class="col-md-3 col-sm-3">
@@ -72,7 +73,7 @@
         <aside id="footer-thumbnails" class="footer-thumbnails"></aside><!-- /#footer-thumbnails -->
         <aside id="footer-copyright">
             <div class="container">
-                <span>NEA Soft © 2017</span>
+                <span>NEA Soft Â© 2017</span>
                 <span class="pull-right"><a href="#page-top" class="roll">Ir hacia arriba</a></span>
             </div>
         </aside>

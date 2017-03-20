@@ -15,6 +15,10 @@ class AddEdificiosTable extends Migration
         Schema::create('edificios', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
+            $table->integer('localidad_id')->unsigned();
+            $table->foreign('localidad_id')->references('id')->on('localidades')->onDelete('cascade');
+            $table->string('direccion');
+
             $table->timestamps();
         });
     }

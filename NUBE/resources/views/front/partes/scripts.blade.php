@@ -44,4 +44,4 @@
 </script>
 
 
-<script src="{{ asset('pnaltillas/assets/js/front.js') }}"></script>
+<script src="{{ asset('js/front.js') }}"></script>

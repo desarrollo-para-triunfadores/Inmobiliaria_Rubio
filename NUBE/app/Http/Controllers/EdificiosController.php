@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Edificio;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
+use App\Localidad;
 use App\Provincia;
 use App\Auditoria;
 use Carbon\Carbon;
@@ -30,10 +31,11 @@ class EdificiosController extends Controller
     public function index(Request $request)
     {
         $edificios = Edificio::all();
+        $localidades = Localidad::all()->pluck('nombre','id');
         if ($edificios->count()==0){ // la funcion count te devuelve la cantidad de registros contenidos en la cadena
-            return view('admin.edificios.sinRegistros'); //se devuelve la vista para crear un registro
+            return view('admin.edificios.sinRegistros')->with('localidades', $localidades); //se devuelve la vista para crear un registro
         } else {
-            return view('admin.edificios.tabla')->with('edificios',$edificios); // se devuelven los registros
+            return view('admin.edificios.tabla')->with('edificios',$edificios)->with('localidades', $localidades); // se devuelven los registros
         }
     }
 

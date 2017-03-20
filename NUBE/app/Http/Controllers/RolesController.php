@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Rol;
 use Illuminate\Http\Request;
 
 class RolesController extends Controller
@@ -13,7 +14,12 @@ class RolesController extends Controller
      */
     public function index()
     {
-        //
+        $roles = Rol::all();
+        if ($roles->count()==0){ // la funcion count te devuelve la cantidad de registros contenidos en la cadena
+            //return view('admin.usuarios.sinRegistros')->with('roles', $roles); //se devuelve la vista para crear un registro
+        } else {
+            return view('admin.roles.tabla')->with('roles', $roles); // se devuelven los registros
+        }
     }
 
     /**

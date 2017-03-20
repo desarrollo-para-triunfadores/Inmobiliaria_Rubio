@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\Rol;
+use Illuminate\Support\Facades\Auth;
 
 class UsersController extends Controller
 {
@@ -14,11 +17,11 @@ class UsersController extends Controller
     public function index()
     {
         $users = User::all();
-        $roles = Rol::all()->lists('nombre','id');
+        //$roles = Rol::all()->lists('nombre','id');
         if ($users->count()==0){ // la funcion count te devuelve la cantidad de registros contenidos en la cadena
-            return view('admin.usuarios.sinRegistros')->with('roles', $roles); //se devuelve la vista para crear un registro
+            //return view('admin.usuarios.sinRegistros')->with('roles', $roles); //se devuelve la vista para crear un registro
         } else {
-            return view('admin.usuarios.tabla')->with('usuarios', $users)->with('roles', $roles); // se devuelven los registros
+            return view('admin.usuarios.tabla')->with('usuarios', $users); // se devuelven los registros
         }
     }
 

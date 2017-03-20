@@ -18,6 +18,11 @@ class Localidad extends Model
     	return $this->belongsTo('App\Provincia');
     }
 
+    public function edificios()
+    {
+        return $this->hasMany('App\Edificio');
+    }
+
 
     public function config() 
     {

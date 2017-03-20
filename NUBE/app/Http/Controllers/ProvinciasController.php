@@ -36,7 +36,7 @@ class ProvinciasController extends Controller
             return response()->json($localidadesDeProvincia);
         }
         $provincias = Provincia::all();
-        $paises = Pais::all()->lists('nombre','id');
+        $paises = Pais::all()->pluck('nombre','id');
         if ($provincias->count()==0){ // la funcion count te devuelve la cantidad de registros contenidos en la cadena
             return view('admin.provincias.sinRegistros')->with('paises', $paises); //se devuelve la vista para crear un registro
         } else {

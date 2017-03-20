@@ -30,7 +30,7 @@ class LocalidadesController extends Controller
     public function index()
     {
         $localidades = Localidad::all();
-        $provincias = Provincia::all()->lists('nombre','id');
+        $provincias = Provincia::all()->pluck('nombre','id');
         if ($localidades->count()==0){ // la funcion count te devuelve la cantidad de registros contenidos en la cadena
             return view('admin.localidades.sinRegistros')->with('provincias', $provincias); //se devuelve la vista para crear un registro
         } else {

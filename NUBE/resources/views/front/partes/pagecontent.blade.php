@@ -16,9 +16,9 @@
                     <div class="feature-box equal-height">
                         <figure class="icon"><i class="fa fa-folder"></i></figure>
                         <aside class="description">
-                            <header><h3>Gran variedad en Inmuebles</h3></header>
+                            <header><h3>ses</h3></header>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            <a href="properties-listing.html" class="link-arrow">Read More</a>
+                            <a href="properties-listing.html" class="link-arrow">Ver más</a>
                         </aside>
                     </div><!-- /.feature-box -->
                 </div><!-- /.col-md-4 -->
@@ -28,7 +28,7 @@
                         <aside class="description">
                             <header><h3>Agentes</h3></header>
                             <p>Aliquam gravida magna et fringilla convallis. Pellentesque habitant morbi </p>
-                            <a href="agents-listing.html" class="link-arrow">Read More</a>
+                            <a href="agents-listing.html" class="link-arrow">Ver más</a>
                         </aside>
                     </div><!-- /.feature-box -->
                 </div><!-- /.col-md-4 -->
@@ -36,20 +36,21 @@
                     <div class="feature-box equal-height">
                         <figure class="icon"><i class="fa fa-money"></i></figure>
                         <aside class="description">
-                            <header><h3>Best Price Guarantee!</h3></header>
+                            <header><h3>texto opcional</h3></header>
                             <p>Phasellus non viverra tortor, id auctor leo. Suspendisse id nibh placerat</p>
-                            <a href="#" class="link-arrow">Read More</a>
+                            <a href="#" class="link-arrow">Ver más</a>
                         </aside>
                     </div><!-- /.feature-box -->
                 </div><!-- /.col-md-4 -->
             </div><!-- /.row -->
         </div><!-- /.container -->
     </section><!-- /#our-services -->
+
     <section id="price-drop" class="block">
         <div class="container">
             <header class="section-title">
-                <h2>Price Drop</h2>
-                <a href="properties-listing.html" class="link-arrow">Todas las Propiedades</a>
+                <h2>Consultar</h2>
+                <a href="{{ asset('plantillas/zoner/properties-listing.html') }}" class="link-arrow">Todas las Propiedades</a>
             </header>
             <div class="row">
                 <div class="col-md-3 col-sm-6">
@@ -61,8 +62,8 @@
                             <div class="overlay">
                                 <div class="info">
                                     <div class="tag price">$ 11,000</div>
-                                    <h3>3398 Lodgeville Road</h3>
-                                    <figure>Golden Valley, MN 55427</figure>
+                                    <h3>Monteagudo 695</h3>
+                                    <figure>Resistencia, Chaco, Argentina</figure>
                                 </div>
                                 <ul class="additional-info">
                                     <li>
@@ -206,7 +207,7 @@
     <section id="new-properties" class="block">
         <div class="container">
             <header class="section-title">
-                <h2>New Properties for You</h2>
+                <h2>Añadidas Recientemente</h2>
                 <a href="properties-listing.html" class="link-arrow">Todas las Propiedades</a>
             </header>
             <div class="row">
