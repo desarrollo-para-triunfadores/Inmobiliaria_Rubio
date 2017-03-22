@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::auth();  //no se si va acá
+Route::auth();  //no se si va acï¿½
 
 /** FRONT-END **/
 Route::resource('/','frontHomeController');
@@ -32,8 +32,12 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('paises','PaisesController');
     Route::resource('provincias','ProvinciasController');
     Route::resource('localidades','LocalidadesController');
-    Route::resource('barrios','BarriosController');
+    //Route::resource('barrios','BarriosController');
     Route::resource('edificios','EdificiosController');
+    
+  Route::get('/configuracion', function () {  // esta ruta es solo para zafar, pero hay que hacer un controller con la info de la empresa
+    return view('admin.configuracion.main');
+});  
 });
 Auth::routes();
 
