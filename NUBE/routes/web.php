@@ -11,15 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::auth();  //no se si va ac�
+Route::auth();  //no se si va aca
 
 /** FRONT-END **/
 Route::resource('/','frontHomeController');
 Route::resource('/inmueble','frontInmuebleController');
+
+Route::resource('/detalle','DetallesFrontController');
+Route::resource('/contacto','MailFrontController');
 
 Auth::routes();
 
@@ -32,7 +31,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('paises','PaisesController');
     Route::resource('provincias','ProvinciasController');
     Route::resource('localidades','LocalidadesController');
-    //Route::resource('barrios','BarriosController');
+    Route::resource('barrios','BarriosController');
     Route::resource('edificios','EdificiosController');
     
   Route::get('/configuracion', function () {  // esta ruta es solo para zafar, pero hay que hacer un controller con la info de la empresa

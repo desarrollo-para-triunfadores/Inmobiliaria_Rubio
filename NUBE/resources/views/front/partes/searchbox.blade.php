@@ -6,9 +6,11 @@
                     <div class="search-box map">
                         <form role="form" id="form-map" class="form-map form-search">
                             <h2>Busque su Propiedad</h2>
+                            {{--
                             <div class="form-group">
                                 <input type="text" class="form-control" id="search-box-property-id" placeholder="Property ID">
                             </div>
+                            --}}
                             <div class="form-group">
                                 <select name="type">
                                     <option value="">Condición</option>
@@ -44,7 +46,7 @@
                                     <option value="4">España</option>
                                     <option value="5">Aeroparque</option>
                                 </select>
-                            </div><!-- /.form-group -->
+                            </div>
                             <div class="form-group">
                                 <select name="property-type">
                                     <option value="">Tipo de Propiedad</option>
@@ -54,11 +56,23 @@
                                     <option value="4">Terreno Plano</option>
                                     <option value="5">Casa</option>
                                 </select>
-                            </div><!-- /.form-group -->
+                            </div>
+                            {{--
                             <div class="form-group">
                                 <div class="price-range">
                                     <input id="price-input" type="text" name="price" value="1000;299000">
                                 </div>
+                            </div>
+                            --}}
+                            <div class="form-group">
+                                <select name="price-type">
+                                    <option value="">$450.000 +</option>
+                                    <option value="1">$500.000 +</option>
+                                    <option value="2">$600.000 +</option>
+                                    <option value="3">$700.000 +</option>
+                                    <option value="4">$800.000 +</option>
+                                    <option value="5">$1100.000 +</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-default">Buscar Ahora</button>

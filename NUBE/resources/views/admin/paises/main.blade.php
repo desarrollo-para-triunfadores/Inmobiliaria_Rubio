@@ -20,7 +20,7 @@ Paises registrados
     <section class="content">
         <div class="row">
 
-            <div class="col-md-12">
+            <div class="col-md-8">
                 <br>
                 <div class="box box-primary">
                     <div class="box-header with-border">
@@ -32,27 +32,21 @@ Paises registrados
                         <table id="example" class="display" cellspacing="0" width="100%">
                             <thead>
                                 <tr>
-                                    <th>Nombre</th>
-                                    <th>Cantidad de provincias asociadas</th>                               
-                                    <th>Fecha alta</th>
-                                    <th>Acciones</th>               
+                                    <th class="text-center">ID</th>
+                                    <th class="text-center">Nombre</th>
+                                    <th class="text-center">Cantidad de provincias asociadas</th>
+                                    <th class="text-center">Fecha alta</th>
+                                    <th class="text-center">Acciones</th>
                                 </tr>
                             </thead>
-                            <tfoot>
-                                <tr>
-                                    <th>Nombre</th>
-                                    <th>Cantidad de provincias asociadas</th>                               
-                                    <th>Fecha alta</th>
-                                    <th>Acciones</th>      
-                                </tr>
-                            </tfoot>
                             <tbody>
                                 @foreach($paises as $pais)
                                 <tr>
-                                    <td>{{$pais->nombre}}</td>
-                                    <td>{{$pais->provincias->count()}}</td>       
-                                    <td>{{$pais->created_at->format('d/m/Y')}}</td>
-                                    <td>  
+                                    <td class="text-center">{{$pais->id}}</td>
+                                    <td class="text-center text-bold">{{$pais->nombre}}</td>
+                                    <td class="text-center">{{$pais->provincias->count()}}</td>
+                                    <td class="text-center">{{$pais->created_at->format('d/m/Y')}}</td>
+                                    <td class="text-center">
                                         <a onclick="completar_campos({{$pais}})" title="Editar este registro" class="btn btn-social-icon btn-warning btn-sm"><i class="fa fa-pencil"></i></a>
                                         <a onclick="abrir_modal_borrar({{$pais->id}})" title="Eliminar este registro" class="btn btn-social-icon btn-sm btn-danger"><i class="fa fa-trash"></i></a>
                                     </td>

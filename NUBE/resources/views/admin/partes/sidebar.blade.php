@@ -1,6 +1,6 @@
-<aside class="main-sidebar">
-    <section class="sidebar">
-        <ul class="sidebar-menu">
+<aside class="main-sidebar bg-black">
+    <section class="sidebar ">
+        <ul class="sidebar-menu bg-black">
             <li class="header" align="center">menú principal</li>                       
             <li id="side-general" class="treeview">
                 <a href="#">
@@ -20,9 +20,9 @@
                         </a>
                         <ul class="treeview-menu" style="display: none;">
                             <li id="side-ele-lugares-paises"><a href="/admin/paises"><i class="fa fa-circle-o"></i> Paises</a></li>
-                            <li id="side-ele-lugares-provincias"><a href="#"><i class="fa fa-circle-o"></i> Provincias</a></li>
-                            <li id="side-ele-lugares-localidades"><a href="#"><i class="fa fa-circle-o"></i> Localidades</a></li>
-                            <li id="side-ele-lugares-barrios"><a href="#"><i class="fa fa-circle-o"></i> Barrios</a></li>
+                            <li id="side-ele-lugares-provincias"><a href="/admin/provincias"><i class="fa fa-circle-o"></i> Provincias</a></li>
+                            <li id="side-ele-lugares-localidades"><a href="/admin/localidades"><i class="fa fa-circle-o"></i> Localidades</a></li>
+                            <li id="side-ele-lugares-barrios"><a href="/admin/barrios"><i class="fa fa-circle-o"></i> Barrios</a></li>
                         </ul>
                     </li>
 

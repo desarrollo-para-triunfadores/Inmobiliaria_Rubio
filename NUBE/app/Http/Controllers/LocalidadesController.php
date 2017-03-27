@@ -12,9 +12,8 @@ use Carbon\Carbon;
 use Laracasts\Flash\Flash;
 use App\Http\Requests\LocalidadRequestCreate;
 use App\Http\Requests\LocalidadRequestEdit;
-use App\Auditoria;
 use Illuminate\Support\Facades\Auth;
-
+use Session;
 class LocalidadesController extends Controller
 {
     public function __construct()
@@ -30,11 +29,11 @@ class LocalidadesController extends Controller
     public function index()
     {
         $localidades = Localidad::all();
-        $provincias = Provincia::all()->pluck('nombre','id');
+        $provincias = Provincia::all();
         if ($localidades->count()==0){ // la funcion count te devuelve la cantidad de registros contenidos en la cadena
             return view('admin.localidades.sinRegistros')->with('provincias', $provincias); //se devuelve la vista para crear un registro
         } else {
-            return view('admin.localidades.tabla')->with('localidades',$localidades)->with('provincias', $provincias); // se devuelven los registros
+            return view('admin.localidades.main')->with('localidades',$localidades)->with('provincias', $provincias); // se devuelven los registros
         }
     }
 
@@ -45,24 +44,14 @@ class LocalidadesController extends Controller
     }
 
 
-    public function store(LocalidadRequestCreate $request)
+    public function store(Request $request)
     {
         $localidad = new Localidad($request->all());
         $localidad->save();
-        Flash::success('La localidad "'. $localidad->nombre.'" ha sido registrada de forma existosa.');
-        /** Auditoria almacena creacion */
-        $auditoria = new Auditoria();
-        $auditoria->tabla = "localidades";
-        $auditoria->elemento_id = $localidad->id;
-        $autor = new Auth();
-        $autor->id = Auth::user()->id;          //Conseguimos el id del usuario actualmente logueado
-        $auditoria->usuario_id = $autor->id;    //lo asignamos a la auditorias
-        $auditoria->accion = "alta";
-        $auditoria->dato_nuevo = "nombre: ".$localidad->nombre." || provincia_id: ".$localidad->provincia_id;
-        $auditoria->dato_anterior = null;
-        $auditoria->save();
-        return redirect()->route('admin.localidades.index');
+        Session::flash('message', 'Se ha registrado a una nueva localidad.');
+        return redirect()->route('localidades.index');
     }
+
 
     /**
      * Display the specified resource.
@@ -80,50 +69,19 @@ class LocalidadesController extends Controller
     }
 
 
-    public function update(LocalidadRequestEdit $request, $id)
-    {
+    public function update(Request $request, $id) {
         $localidad = Localidad::find($id);
-        $dato_anterior = "nombre: ".$localidad->nombre." || provincia_id: ".$localidad->provincia_id;
         $localidad->fill($request->all());
         $localidad->save();
-        Flash::success("Se ha realizado la actualización del registro: ".$localidad->nombre.".");
-
-        /** Auditoria actualizacion */
-        $auditoria = new Auditoria();
-        $auditoria->tabla = "localidades";
-        $auditoria->elemento_id = $localidad->id;
-        $autor = new Auth();
-        $autor->id = Auth::user()->id;          //Conseguimos el id del usuario actualmente logueado
-        $auditoria->usuario_id = $autor->id;    //lo asignamos a la auditorias
-        $auditoria->accion = "modificacion";
-        $auditoria->dato_nuevo = "nombre: ".$localidad->nombre." || provincia_id: ".$localidad->provincia_id;
-        $auditoria->dato_anterior = $dato_anterior;
-        $auditoria->save();
-        return redirect()->route('admin.localidades.show', $id);
+        Session::flash('message', 'Se ha actualizado la información');
+        return redirect()->route('localidades.index');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
+
+    public function destroy($id) {
         $localidad = Localidad::find($id);
-        $dato_anterior = "nombre: ".$localidad->nombre." || provincia_id: ".$localidad->provincia_id;
-        /** Auditoria eliminación */
-        $auditoria = new Auditoria();
-        $auditoria->tabla = "localidades";
-        $auditoria->elemento_id = $localidad->id;
-        $autor = new Auth();
-        $autor->id = Auth::user()->id;          //Conseguimos el id del usuario actualmente logueado
-        $auditoria->usuario_id = $autor->id;    //lo asignamos a la auditorias
-        $auditoria->accion = "eliminacion";
-        $auditoria->dato_anterior = $dato_anterior;
-        $auditoria->save();
         $localidad->delete();
-        Flash::error("Se ha realizado la eliminación del registro: ".$localidad->nombre.".");
-        return redirect()->route('admin.localidades.index');
+        Session::flash('message', 'La localidad ha sido eliminada');
+        return redirect()->route('localidades.index');
     }
 }

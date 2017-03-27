@@ -1,4 +1,4 @@
-<header class=" bg-red-active main-header">
+<header class=" bg-black-active main-header">
     <a href="index2.html" class="logo">
         <span class="logo-mini"><b>I</b>R</span>
         <span class="logo-lg"><b>Inmobiliaria</b> Rubio</span>

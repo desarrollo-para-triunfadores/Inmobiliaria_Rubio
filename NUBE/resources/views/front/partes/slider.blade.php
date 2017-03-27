@@ -1,16 +1,14 @@
+
 <div id="slider" class="loading has-parallax">
     <div id="loading-icon"><i class="fa fa-cog fa-spin"></i></div>
     <div class="owl-carousel homepage-slider carousel-full-width">
         <div class="slide">
             <div class="container">
-                <div class="overlay">
-                    <div class="info">
-                        <div class="tag price">$ 850,000</div>
-                        <h3>9 de Julio 429</h3>
-                        <figure>Resistencia, Chaco, AR</figure>
-                    </div>
-                    <hr>
-                    <a href="property-detail.html" class="link-arrow">Ver mas</a>
+                <div class="title">
+
+
+
+
                 </div>
             </div>
             <img alt="" src="{{ asset('plantillas/zoner/assets/img/slide-04.jpg')}}">
@@ -19,9 +17,9 @@
             <div class="container">
                 <div class="overlay">
                     <div class="info">
-                        <div class="tag price">$ 16,000</div>
-                        <h3>987 Cantebury Drive</h3>
-                        <figure>Chicago, IL 60610</figure>
+                        <div class="tag price">$ 850,000</div>
+                        <h3>9 de Julio 429</h3>
+                        <figure>Resistencia, Chaco, AR</figure>
                     </div>
                     <hr>
                     <a href="property-detail.html" class="link-arrow">Ver Más</a>

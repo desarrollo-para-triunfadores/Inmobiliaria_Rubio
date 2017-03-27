@@ -7,10 +7,10 @@
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar">346346</span>
                     <span class="icon-bar">636345666</span>
-                    <span class="icon-bar"></span>
+                    <span class="icon-bar">Inmobiliaria NUBE</span>
                 </button>
                 <div class="navbar-brand nav" id="brand">
-                    <!-- <a href="index-google-map-fullscreen.html"><img src="assets/img/logo.png" alt="brand"></a> -->
+                    <a href="">Inmobiliaria NUBE</a>
                 </div>
             </div>
             <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
@@ -27,12 +27,9 @@
                         <ul class="child-navigation">
                             <li><a href="about-us.html">Quienes somos?</a></li>
                             <li><a href="agent-detail.html">Detalles del Agente</a></li>
-                            <li><a href="invoice-print.html">Facturas</a></li>
-                            <li><a href="profile.html">Perfil</a></li>
                             <li><a href="my-properties.html">Mis Propiedades</a></li>
                             <li><a href="bookmarked.html">Propiedades Marcadas</a></li>
                             <li><a href="create-account.html">Crear Cuenta</a></li>
-                            <li><a href="create-agency.html">Crear Agencia</a></li>
                             <li><a href="{{ url('/login') }}">Ingresar</a></li>
                             <li class="has-child"><a href="#">Error Pages</a>
                                 <ul class="child-navigation">
@@ -42,31 +39,17 @@
                                 </ul>
                             </li>
                             <li><a href="faq.html">FAQ</a></li>
-                            <li><a href="left-sidebar.html">Left Sidebar</a></li>
-                            <li><a href="right-sidebar.html">Right Sidebar</a></li>
-                            <li><a href="sticky-footer.html">Sticky Footer</a></li>
-                            <li><a href="pricing.html">Precios</a></li>
-                            <li><a href="shortcodes.html">Shortcodes</a></li>
-                            <li><a href="timeline.html">Timeline</a></li>
                             <li><a href="terms-conditions.html">Terminos y Condiciones</a></li>
-                            <li><a href="rtl.html">RTL Support</a></li>
                         </ul>
                     </li>
                     <li class="has-child"><a href="#">Agentes y Agencias</a>
                         <ul class="child-navigation">
-                            <li><a href="agents-listing.html">Agents Listing</a></li>
-                            <li><a href="agent-detail.html">Agent Detail</a></li>
-                            <li><a href="agencies-listing.html">Agencies Listing</a></li>
-                            <li><a href="agency-detail.html">Agency Detail</a></li>
+                            <li><a href="agents-listing.html">Lista de Agentes</a></li>
+                            <li><a href="agencies-listing.html">Listado de  Agencias</a></li>
                         </ul>
                     </li>
-                    <li><a href="submit.html">Enviar</a></li>
-                    <li class="has-child"><a href="#">Blog</a>
-                        <ul class="child-navigation">
-                            <li><a href="blog.html">Blog Listing</a></li>
-                            <li><a href="blog-detail.html">Blog Post Detail</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="{{ route('contacto.index') }}">Publica tu propiedad</a></li>
+
                     <li><a href="contact.html">Contacto</a></li>
                 </ul>
             </nav><!-- /.navbar collapse-->

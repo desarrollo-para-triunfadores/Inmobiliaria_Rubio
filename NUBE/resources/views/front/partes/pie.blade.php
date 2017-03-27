@@ -3,47 +3,20 @@
         <aside id="footer-main">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3 col-sm-3">
+                    <div class="col-md-5 col-sm-5">
                         <article>
                             <h3>Quienes Somos</h3>
-                            <p>descripcion del negocio bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                                bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla
-                                bla bla bla bla bla bla bla bla bla bla bla bla
+                            <p>Somos unas empresa formada por un equipo de profesionales altamente cualificados y orientados a dar respuesta a las necesidades de nuestros clientes.
+                                Nuestra actividad comprende dentro de la gestión inmobiliaria en general, tasaciones, gestiones ante organismos públicos como ayuntamientos, registros de la propiedad, redacción de documentos y contratos.
 
                             </p>
+                            {{--
                             <hr>
                             <a href="#" class="link-arrow">Saber Mas</a>
+                            --}}
                         </article>
                     </div><!-- /.col-sm-3 -->
-                    <div class="col-md-3 col-sm-3">
-                        <article>
-                            <h3>Propiedades Recientes</h3>
-                            <div class="property small">
-                                <a href="property-detail.html">
-                                    <div class="property-image">
-                                        <img alt="" src="assets/img/properties/property-06.jpg">
-                                    </div>
-                                </a>
-                                <div class="info">
-                                    <a href="property-detail.html"><h4>2186 San Martin</h4></a>
-                                    <figure>Doral, FL 33178 </figure>
-                                    <div class="tag price">$ 72,000</div>
-                                </div>
-                            </div><!-- /.property -->
-                            <div class="property small">
-                                <a href="property-detail.html">
-                                    <div class="property-image">
-                                        <img alt="" src="assets/img/properties/property-09.jpg">
-                                    </div>
-                                </a>
-                                <div class="info">
-                                    <a href="property-detail.html"><h4>2479 Joaquin Sabina</h4></a>
-                                    <figure>Capiovi, Misiones</figure>
-                                    <div class="tag price">$ 36,000</div>
-                                </div>
-                            </div><!-- /.property -->
-                        </article>
-                    </div><!-- /.col-sm-3 -->
+
                     <div class="col-md-3 col-sm-3">
                         <article>
                             <h3>Contacto</h3>

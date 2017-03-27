@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html lang="es-ES">
 <head>
-    <title>Inmobiliaria Nube | Sistema de gestión inmobiliaria </title>
     @include('front.partes.estilos')
 </head>
 
@@ -11,10 +9,15 @@
         @include('front.partes.navbar')
         <!-- Slider -->
         @include('front.partes.slider')
+
         <!-- Search Box -->
+
         @include('front.partes.searchbox')
-        <!-- Page Content -->
-        @include('front.partes.pagecontent')
+
+
+        <!-- Espacio para contenido propio de cada seccion -->
+        @include('front.inicio.contenido')
+
         <!-- Page Footer -->
         @include('front.partes.pie')
     </div>

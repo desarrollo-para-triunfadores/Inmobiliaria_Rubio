@@ -45,3 +45,5 @@
 
 
 <script src="{{ asset('js/front.js') }}"></script>
+
+<script type="text/javascript" src="{{ asset('plantillas/zoner/assets/js/locations.js') }}"></script>

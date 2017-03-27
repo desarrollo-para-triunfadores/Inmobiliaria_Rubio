@@ -14,7 +14,7 @@ Use Session;
 class PaisesController extends Controller {
 
     public function __construct() {
-        Carbon::setlocale('es'); // Instancio en Español el manejador de fechas de Laravel
+        Carbon::setlocale('es');
     }
 
     /**
@@ -49,7 +49,7 @@ class PaisesController extends Controller {
     public function store(Request $request) {
         $pais = new Pais($request->all());
         $pais->save();
-        Session::flash('message', '¡Se ha registrado a un nuevo país con éxito!');
+        Session::flash('message', '¡Se ha registrado a un nuevo país!');
         return redirect()->route('paises.index');
     }
 
