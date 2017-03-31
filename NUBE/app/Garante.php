@@ -13,4 +13,8 @@ class Garante extends Model
     {
         return $this->hasMany('App\Inmueble');
     }
+    public function localidad()
+    {
+        return $this->belongsTo('App\Localidad');
+    }
 }

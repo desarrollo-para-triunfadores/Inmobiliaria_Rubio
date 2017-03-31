@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Garante;
-use App\Provincia;
+use App\Localidad;
 use App\Auditoria;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
@@ -29,11 +29,12 @@ class GarantesController extends Controller
      */
     public function index(Request $request)
     {
-        $garante = Inqulino::all();
+        $garantes = Garante::all();
+        $localidades = Localidad::all();
         if ($garantes->count()==0){ // la funcion count te devuelve la cantidad de registros contenidos en la cadena
-            return view('admin.garantes.sinRegistros'); //se devuelve la vista para crear un registro
+            return view('admin.garantes.sinRegistros')->with('localidades', $localidades); //se devuelve la vista para crear un registro
         } else {
-            return view('admin.garantes.tabla')->with('garantes',$garantes); // se devuelven los registros
+            return view('admin.garantes.main')->with('garantes',$garantes)->with('localidades', $localidades); // se devuelven los registros
         }
     }
 
@@ -44,31 +45,22 @@ class GarantesController extends Controller
     }
 
 
-    public function store(GaranteRequestCreate $request)
+    public function store(Request $request)
     {
         $garante = new Garante($request->all());
         $garante->save();
-        Flash::success('El país "'. $garante->nombre.'" ha sido registrado de forma existosa.');
-
-        /** Auditoria almacena creacion */
-        $auditoria = new Auditoria();
-        $auditoria->tabla = "garantes";
-        $auditoria->elemento_id = $garante->id;
-        $autor = new Auth();
-        $autor->id = Auth::user()->id;          //Conseguimos el id del usuario actualmente logueado
-        $auditoria->usuario_id = $autor->id;    //lo asignamos a la auditorias
-        $auditoria->accion = "alta";
-        $auditoria->dato_nuevo = "nombre: ".$garante->nombre;
-        $auditoria->dato_anterior = null;
-        $auditoria->save();
-        return redirect()->route('admin.garantes.index');
+        Session::flash('message', 'Se ha registrado un nuevo garante.');
+        return redirect()->route('garantes.index');
     }
 
 
     public function show($id)
     {
         $garante = Garante::find($id);
-        return view('admin.garantes.show')->with('garante',$garante);
+        $localidades = Localidad::all();
+        return view('admin.garantes.show')
+            ->with('garante', $garante)
+            ->with('localidades', $localidades);
     }
 
 
@@ -77,25 +69,13 @@ class GarantesController extends Controller
     }
 
 
-    public function update(GaranteRequestEdit $request, $id)
+    public function update(Request $request, $id)
     {
         $garante = Garante::find($id);
-        $dato_anterior = $garante->nombre;        //obtenemos el 'nombre' del registro antes de sobreescribirlo
         $garante->fill($request->all());
         $garante->save();
-        Flash::success("Se ha realizado la actualización del registro: ".$garante->nombre.".");
-        /** Auditoria actualizacion */
-        $auditoria = new Auditoria();
-        $auditoria->tabla = "garantes";
-        $auditoria->elemento_id = $garante->id;
-        $autor = new Auth();
-        $autor->id = Auth::user()->id;          //Conseguimos el id del usuario actualmente logueado
-        $auditoria->usuario_id = $autor->id;    //lo asignamos a la auditorias
-        $auditoria->accion = "modificacion";
-        $auditoria->dato_nuevo = "nombre: ".$garante->nombre;
-        $auditoria->dato_anterior = $dato_anterior;
-        $auditoria->save();
-        return redirect()->route('admin.garantes.show', $id);
+        Session::flash('message', 'Se ha actualizado la información');
+        return redirect()->route('garantes.index');
     }
 
     /**
@@ -107,22 +87,8 @@ class GarantesController extends Controller
     public function destroy($id)
     {
         $garante = Garante::find($id);
-        $dato_anterior = $garante->nombre;
-
-        /** Auditoria eliminación */
-        $auditoria = new Auditoria();
-        $auditoria->tabla = "garantes";
-        $auditoria->elemento_id = $garante->id;
-        $autor = new Auth();
-        $autor->id = Auth::user()->id;          //Conseguimos el id del usuario actualmente logueado
-        $auditoria->usuario_id = $autor->id;    //lo asignamos a la auditorias
-        $auditoria->accion = "eliminacion";
-
-        $auditoria->dato_anterior = $dato_anterior;
-        $auditoria->save();
         $garante->delete();
-
-        Flash::error("Se ha realizado la eliminación del registro: ".$garante->nombre.".");
-        return redirect()->route('admin.garantes.index');
+        Session::flash('message', 'El garante ha sido eliminado del sistema');
+        return redirect()->route('garantes.index');
     }
 }

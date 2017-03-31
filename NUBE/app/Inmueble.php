@@ -8,7 +8,7 @@ class Inmueble extends Model
 {
     protected $table =  "inmuebles";
 
-    protected $fillable = ['inquilino_id','garante_id','edificio_id','barrio_id','localidad_id', 'condicion', 'precio_compra', 'calle','altura','piso','numero', 'superficie', 'fecha_habilitacion','fecha_fin_contrato','googleMapsLink','descripcion', 'disponible' ];
+    protected $fillable = ['inquilino_id','garante_id','edificio_id','barrio_id','localidad_id', 'condicion', 'precio_compra', 'calle','altura','piso','numero', 'superficie', 'fecha_habilitacion','fecha_fin_contrato','googleMapsLink', 'video_link', 'descripcion', 'disponible' ];
     // condicion: condicion
     // googleMapsLink: url de la ubicacion del inmueble en Maps
     //en caso de no tener barrio el campo localidad id es necesario

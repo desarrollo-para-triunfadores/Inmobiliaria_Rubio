@@ -33,6 +33,10 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('localidades','LocalidadesController');
     Route::resource('barrios','BarriosController');
     Route::resource('edificios','EdificiosController');
+
+    Route::resource('garantes','GarantesController');
+    Route::resource('inquilinos','InquilinosController');
+
     
   Route::get('/configuracion', function () {  // esta ruta es solo para zafar, pero hay que hacer un controller con la info de la empresa
     return view('admin.configuracion.main');

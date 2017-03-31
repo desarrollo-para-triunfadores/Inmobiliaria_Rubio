@@ -31,11 +31,11 @@ class EdificiosController extends Controller
     public function index(Request $request)
     {
         $edificios = Edificio::all();
-        $localidades = Localidad::all()->pluck('nombre','id');
+        $localidades = Localidad::all();
         if ($edificios->count()==0){ // la funcion count te devuelve la cantidad de registros contenidos en la cadena
             return view('admin.edificios.sinRegistros')->with('localidades', $localidades); //se devuelve la vista para crear un registro
         } else {
-            return view('admin.edificios.tabla')->with('edificios',$edificios)->with('localidades', $localidades); // se devuelven los registros
+            return view('admin.edificios.main')->with('edificios',$edificios)->with('localidades', $localidades); // se devuelven los registros
         }
     }
 
@@ -50,27 +50,18 @@ class EdificiosController extends Controller
     {
         $edificio = new edificio($request->all());
         $edificio->save();
-        Flash::success('El país "'. $edificio->nombre.'" ha sido registrado de forma existosa.');
-
-        /** Auditoria almacena creacion */
-        $auditoria = new Auditoria();
-        $auditoria->tabla = "edificios";
-        $auditoria->elemento_id = $edificio->id;
-        $autor = new Auth();
-        $autor->id = Auth::user()->id;          //Conseguimos el id del usuario actualmente logueado
-        $auditoria->usuario_id = $autor->id;    //lo asignamos a la auditorias
-        $auditoria->accion = "alta";
-        $auditoria->dato_nuevo = "nombre: ".$edificio->nombre;
-        $auditoria->dato_anterior = null;
-        $auditoria->save();
-        return redirect()->route('admin.edificios.index');
+        ion::flash('message', 'Se ha registrado un nuevo edificio en la localidad de '.$edificio->localidad.'.');
+        return redirect()->route('edificio.index');
     }
 
 
     public function show($id)
     {
         $edificio = edificio::find($id);
-        return view('admin.edificios.show')->with('edificio',$edificio);
+        $localidades = Localidad::all()->lists('nombre','id');
+        return view('admin.edificios.show')
+            ->with('edificio', $edificio)
+            ->with('localidades', $localidades);
     }
 
 
@@ -82,22 +73,10 @@ class EdificiosController extends Controller
     public function update(edificioRequestEdit $request, $id)
     {
         $edificio = edificio::find($id);
-        $dato_anterior = $edificio->nombre;        //obtenemos el 'nombre' del registro antes de sobreescribirlo
         $edificio->fill($request->all());
         $edificio->save();
-        Flash::success("Se ha realizado la actualización del registro: ".$edificio->nombre.".");
-        /** Auditoria actualizacion */
-        $auditoria = new Auditoria();
-        $auditoria->tabla = "edificios";
-        $auditoria->elemento_id = $edificio->id;
-        $autor = new Auth();
-        $autor->id = Auth::user()->id;          //Conseguimos el id del usuario actualmente logueado
-        $auditoria->usuario_id = $autor->id;    //lo asignamos a la auditorias
-        $auditoria->accion = "modificacion";
-        $auditoria->dato_nuevo = "nombre: ".$edificio->nombre;
-        $auditoria->dato_anterior = $dato_anterior;
-        $auditoria->save();
-        return redirect()->route('admin.edificios.show', $id);
+        Session::flash('message', 'Se ha actualizado la información');
+        return redirect()->route('edificios.index');
     }
 
     /**
@@ -109,22 +88,8 @@ class EdificiosController extends Controller
     public function destroy($id)
     {
         $edificio = edificio::find($id);
-        $dato_anterior = $edificio->nombre;
-
-        /** Auditoria eliminación */
-        $auditoria = new Auditoria();
-        $auditoria->tabla = "edificios";
-        $auditoria->elemento_id = $edificio->id;
-        $autor = new Auth();
-        $autor->id = Auth::user()->id;          //Conseguimos el id del usuario actualmente logueado
-        $auditoria->usuario_id = $autor->id;    //lo asignamos a la auditorias
-        $auditoria->accion = "eliminacion";
-
-        $auditoria->dato_anterior = $dato_anterior;
-        $auditoria->save();
         $edificio->delete();
-
-        Flash::error("Se ha realizado la eliminación del registro: ".$edificio->nombre.".");
+        Session::flash('message', 'El edificio ha sido eliminado del sistema');
         return redirect()->route('admin.edificios.index');
     }
 }

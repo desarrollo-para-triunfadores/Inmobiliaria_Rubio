@@ -2,7 +2,7 @@
 <html><head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>La Auténtica | Ingresar</title>
+        <title>Inmobiliaria NUBE | Ingresar</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <!-- Bootstrap 3.3.6 -->
@@ -27,7 +27,7 @@
     <body class="hold-transition login-page">
         <div class="login-box">
             <div class="login-logo">
-                 <a href="../../index2.html">Inmobiliaria<b> Rubio</b></a><br>
+                 <a href="../../index2.html">Inmobiliaria<b> NUBE</b></a><br>
                    <small>sistema de gestión integral</small>
             </div>         
             <!-- /.login-logo -->
@@ -83,16 +83,16 @@
         <!-- iCheck -->
         <script src="{{ asset('plantillas/AdminLTE/plugins/iCheck/icheck.min.js') }}"></script>      
 
-
         <script>
-$(function () {
-    $('input').iCheck({
-        checkboxClass: 'icheckbox_square-blue',
-        radioClass: 'iradio_square-blue',
-        increaseArea: '20%' // optional
-    });
-});
+            $(function () {
+                $('input').iCheck({
+                    checkboxClass: 'icheckbox_square-blue',
+                    radioClass: 'iradio_square-blue',
+                    increaseArea: '20%' // optional
+                });
+            });
         </script>
 
 
-    </body></html>
+    </body>
+</html>

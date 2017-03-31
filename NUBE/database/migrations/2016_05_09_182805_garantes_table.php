@@ -15,7 +15,7 @@ class GarantesTable extends Migration
         Schema::create('garantes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombre');
-            $table->string('apelldo');
+            $table->string('apellido');
             $table->string('dni');
             $table->string('fecha_nac');
             $table->string('telefono');

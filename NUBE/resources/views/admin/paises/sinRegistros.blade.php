@@ -1,7 +1,7 @@
 @extends('admin.partes.index')
 
 @section('title')
-    Usuarios registrados
+    Paises registrados
 @endsection
 
 @section('sidebar')
@@ -9,10 +9,10 @@
 @endsection
 
 @section('content')
-@include('admin.usuarios.create')
+@include('admin.paises.create')
 <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
     <div class="page-header pull-left">
-        <div class="page-title">Usuarios</div>
+        <div class="page-title">Paises</div>
     </div>        
     <div class="clearfix"></div>
 </div>                            
@@ -37,6 +37,6 @@
 @section('script') 
     <script>
         var listSidebar = "li1";
-        var elemFaltante = "usuario";
+        var elemFaltante = "pais";
     </script>
 @endsection

@@ -22,7 +22,10 @@ class Localidad extends Model
     {
         return $this->hasMany('App\Edificio');
     }
-
+    public function garantes()
+    {
+        return $this->hasMany('App\Garantes');
+    }
 
     public function config() 
     {
