@@ -13,6 +13,7 @@ use Laracasts\Flash\Flash;
 use App\Http\Requests\GaranteRequestCreate;
 use App\Http\Requests\GaranteRequestEdit;
 use Illuminate\Http\Request;
+use Session;
 
 
 class GarantesController extends Controller

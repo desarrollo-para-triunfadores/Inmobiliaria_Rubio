@@ -38,7 +38,7 @@
                     </li>
 
 
-                    <li id="side-ele-lugares-paises"><a href="/admin/edificios"><i class="fa fa-circle-o"></i> Inquilinos</a></li>
+                    <li id="side-ele-lugares-paises"><a href="/admin/inquilinos"><i class="fa fa-circle-o"></i> Inquilinos</a></li>
                     <li id="side-ele-lugares-provincias"><a href="/admin/garantes"><i class="fa fa-circle-o"></i> Garantes</a></li>
 
 
