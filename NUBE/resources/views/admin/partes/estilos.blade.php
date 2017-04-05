@@ -40,12 +40,22 @@
 <link type="text/css" rel="stylesheet" href="{{ asset('plantillas/AdminLTE/plugins/colorpicker/bootstrap-colorpicker.min.css') }}  ">
 
 <!-- Select2 -->
-  <link type="text/css" rel="stylesheet" href="{{ asset('plantillas/AdminLTE/plugins/select2/select2.min.css') }}  ">
+<link type="text/css" rel="stylesheet" href="{{ asset('plantillas/AdminLTE/plugins/select2/select2.min.css') }}  ">
 
-  <!-- DataTables -->
-  <link rel="stylesheet" type="text/css" href="{{ asset('plantillas/AdminLTE/plugins/DataTables/media/css/jquery.dataTables.min.css') }}  ">
-  
+<!-- DataTables -->
+<link rel="stylesheet" type="text/css" href="{{ asset('plantillas/AdminLTE/plugins/DataTables/media/css/jquery.dataTables.min.css') }}  ">
+
+<!-- wizard -->
+<link type="text/css" rel="stylesheet" href="{{ asset('plantillas/AdminLTE/plugins/bootstrap-wizard/css/bwizard.css') }}  ">
+
+
+
 <link type="text/css" rel="stylesheet" href="{{ asset('css/animate.css') }}  ">
+
+<link type="text/css" rel="stylesheet" href="{{ asset('plantillas/AdminLTE/plugins/jquery-steps-master/css/jquery.steps.css') }}  ">
+
+
+
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>

@@ -1,6 +1,4 @@
-$("#side-general").addClass("active");
-$("#side-ele-lugares").addClass("active");
-$("#side-ele-lugares-edificios").addClass("active");
+$("#side-inmueble").addClass("active");
 
 
 function completar_campos(edificio) {

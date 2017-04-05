@@ -35,7 +35,7 @@
                     </div>                        
                     <div class="form-group">
                         <label for="exampleInputFile">Imagen de perfil:</label>
-                        <input name="imagen" type="file" class="form-control-file" aria-describedby="fileHelp">                            
+                        <input name="imagen" type="file" class="form-control-file" aria-describedby="fileHelp" multiple>                            
                         <small class="form-text text-muted"><strong>Información:</strong> si no escoge una imagen nueva se utilizará una imagen prestablecida.</small>
                     </div>                        
                     <button id="boton_submit_crear" type="submit" class="btn btn-primary hide"></button>

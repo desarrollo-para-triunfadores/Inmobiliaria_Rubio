@@ -59,10 +59,35 @@ $.widget.bridge('uibutton', $.ui.button);
 <!-- DataTables -->
 <script src="{{ asset('plantillas/AdminLTE/plugins/DataTables/media/js/jquery.dataTables.min.js') }}"></script>
 
+
+
+
+<script src="{{ asset('plantillas/AdminLTE/plugins/jquery-steps-master/build/jquery.steps.js') }}"></script>
+
+
+
+
+
+
+
 <script>
 
+$(function ()
+{
+    $("#wizard").steps({
+        headerTag: "h2",
+        bodyTag: "section",
+        transitionEffect: "slideLeft",
+        onFinished: function (event, currentIndex)
+        {
+            alert("Submitted!");
+        }
+    });
+});
 
-$(".select2").select2();
+$(".select2").select2({
+    placeholder: "seleccione una opción"
+});
 
 $('#example').DataTable();
 

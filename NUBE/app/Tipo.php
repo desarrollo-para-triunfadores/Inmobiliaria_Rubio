@@ -3,8 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Cviebrock\EloquentSluggable\SluggableInterface;
-use Cviebrock\EloquentSluggable\SluggableTrait;
+
 
 class Tipo extends Model
 {
@@ -18,9 +17,6 @@ class Tipo extends Model
     }
 
 
-    public function scopeSearchValidos($query)
-    {
-        return $query->where('id',  '>', 1);
-    }
+
 
 }

@@ -1,4 +1,5 @@
-$("#side-general").addClass("active");
+$("#side-general-li").addClass("active");
+$("#side-general-ul").addClass("menu-open");
 $("#side-ele-usuarios").addClass("active");
 
 $('#select_usuario').on('change', function (evt) {

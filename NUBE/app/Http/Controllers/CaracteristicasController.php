@@ -2,24 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-use App\Ambiente;
-use App\Localidad;
-use App\Caracteristia;
-use App\Auditoria;
+use App\Tipo;
+use App\Caracteristica;
 use Illuminate\Support\Facades\Auth;
-use Laracasts\Flash\Flash;
+use Illuminate\Http\Request;
 use Carbon\Carbon;
-use App\Http\Requests\caracteristicaRequestCreate;
-use App\Http\Requests\caracteristicaRequestEdit;
+Use Session;
 
-class AMbientesController extends Controller
-{
-    public function __construct()
-    {
+class CaracteristicasController extends Controller {
+
+    public function __construct() {
         Carbon::setlocale('es'); // Instancio en Español el manejador de fechas de Laravel
     }
 
@@ -28,14 +22,16 @@ class AMbientesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
-    {
-        $caracteristicas = Ambiente::all();
-        if ($caracteristicas->count()==0){ // la funcion count te devuelve la cantidad de registros contenidos en la cadena
-            return view('admin.caracteristicas.sinRegistros')->with('caracteristicas', $caracteristicas); //se devuelve la vista para crear un registro
-        } else {
-            return view('admin.caracteristicas.tabla')->with('caracteristicas', $caracteristicas)->with('caracteristicas', $caracteristicas); // se devuelven los registros
-        }
+    public function index(Request $request) {
+        $caracteristicas = Caracteristica::all();
+        $tipos = Tipo::all();
+//        if ($tiposes->count()==0){ // la funcion count te devuelve la cantidad de registros contenidos en la cadena
+//            return view('admin.tiposes.sinRegistros'); //se devuelve la vista para crear un registro
+//        } else {
+        return view('admin.caracteristica.main')
+                ->with('tipos', $tipos)
+                ->with('caracteristicas', $caracteristicas); // se devuelven los registros
+//        }
     }
 
     /**
@@ -43,29 +39,21 @@ class AMbientesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {        
-        return view('admin.caracteristicas.create');
+    public function create() {
+        //
     }
 
-
-    public function store(caracteristicaRequestCreate $request)
-    {   
-        $caracteristica = new caracteristica($request->all());
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request) {
+        $caracteristica = new Caracteristica($request->all());
         $caracteristica->save();
-        Flash::success('La caracteristica "'. $caracteristica->nombre.'" ha sido registrada de forma existosa.');
-        /** Auditoria almacena creacion */
-        $auditoria = new Auditoria();
-        $auditoria->tabla = "caracteristicas";
-        $auditoria->elemento_id = $caracteristica->id;
-        $autor = new Auth();
-        $autor->id = Auth::user()->id;          //Conseguimos el id del usuario actualmente logueado
-        $auditoria->usuario_id = $autor->id;    //lo asignamos a la auditorias
-        $auditoria->accion = "alta";
-        $auditoria->dato_nuevo = "nombre: ".$caracteristica->nombre."|| caracteristica_id: ".$caracteristica->caracteristica_id;
-        $auditoria->dato_anterior = null;
-        $auditoria->save();
-        return redirect()->route('admin.caracteristicas.index');
+        Session::flash('message', '¡Se ha registrado a una característica de inmueble!');
+        return redirect()->route('caracteristicas.index');
     }
 
     /**
@@ -74,37 +62,33 @@ class AMbientesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
-    {
-        $caracteristicaes = Caracteristia::all()->lists('nombre','id');
-        $caracteristica = caracteristica::find($id);
-        return view('admin.caracteristicas.show')
-            ->with('caracteristica', $caracteristica)
-            ->with('caracteristicaes', $caracteristicaes);
+    public function show($id) {
+        //
     }
 
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function edit($id) {
+        //
+    }
 
-    public function update(AmbienteRequestEdit $request, $id)
-    {
-        $caracteristica = caracteristica::find($id);
-        $dato_anterior = "nombre: ".$caracteristica->nombre."|| caracteristica_id: ".$caracteristica->caracteristica_id;        //obtenemos el 'nombre' del registro antes de sobreescribirlo
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id) {
+        $caracteristica = Caracteristica::find($id);
         $caracteristica->fill($request->all());
         $caracteristica->save();
-
-        /** Auditoria actualizacion */
-        $auditoria = new Auditoria();
-        $auditoria->tabla = "caracteristicas";
-        $auditoria->elemento_id = $caracteristica->id;
-        $autor = new Auth();
-        $autor->id = Auth::user()->id;          //Conseguimos el id del usuario actualmente logueado
-        $auditoria->usuario_id = $autor->id;    //lo asignamos a la auditorias
-        $auditoria->accion = "modificacion";
-        $auditoria->dato_nuevo = "nombre: ".$caracteristica->nombre."|| caracteristica_id: ".$caracteristica->caracteristica_id;
-        $auditoria->dato_anterior = $dato_anterior;
-        $auditoria->save();
-
-        Flash::success("Se ha realizado la actualización del registro: ".$caracteristica->nombre.".");
-        return redirect()->route('admin.caracteristicas.show', $id);
+        Session::flash('message', '¡Se ha actualizado la información de una característica con éxito!');
+        return redirect()->route('caracteristicas.index');
     }
 
     /**
@@ -113,33 +97,11 @@ class AMbientesController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        $caracteristica = Ambiente::find($id);
-        $dato_anterior ="nombre: ".$caracteristica->nombre." || caracteristica_id: ".$caracteristica->caracteristica_id;
-
-        /** Auditoria eliminación */
-        $auditoria = new Auditoria();
-        $auditoria->tabla = "caracteristicas";
-        $auditoria->elemento_id = $caracteristica->id;
-        $autor = new Auth();
-        $autor->id = Auth::user()->id;          //Conseguimos el id del usuario actualmente logueado
-        $auditoria->usuario_id = $autor->id;    //lo asignamos a la auditorias
-        $auditoria->accion = "eliminacion";
-
-        $auditoria->dato_anterior = $dato_anterior;
-        $auditoria->save();
-
+    public function destroy($id) {
+        $caracteristica = Caracteristica::find($id);
         $caracteristica->delete();
-        Flash::error("Se ha realizado la eliminación del registro: ".$caracteristica->nombre.".");
-        return redirect()->route('admin.caracteristicas.index');
+        Session::flash('message', '¡La característica seleccionada a sido eliminada!');
+        return redirect()->route('caracteristicas.index');
     }
 
-    /** Esta funcion llama al metodo del modelo que obtiene las localidades ingresando id caracteristica */
-    public function getLocalidades(Request $request, $id){
-        if($request->ajax()){
-            $localidadesDecaracteristica = Localidad::localidades($id);
-            return response()->json($localidadesDecaracteristica);
-        }
-    }
 }

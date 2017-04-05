@@ -20,7 +20,7 @@ Paises registrados
     <section class="content">
         <div class="row">
 
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <br>
                 <div class="box box-primary">
                     <div class="box-header with-border">
@@ -31,8 +31,7 @@ Paises registrados
                         @include('admin.partes.msj_acciones')
                         <table id="example" class="display" cellspacing="0" width="100%">
                             <thead>
-                                <tr>
-                                    <th class="text-center">ID</th>
+                                <tr>                                  
                                     <th class="text-center">Nombre</th>
                                     <th class="text-center">Cantidad de provincias asociadas</th>
                                     <th class="text-center">Fecha alta</th>
@@ -41,8 +40,7 @@ Paises registrados
                             </thead>
                             <tbody>
                                 @foreach($paises as $pais)
-                                <tr>
-                                    <td class="text-center">{{$pais->id}}</td>
+                                <tr>                                    
                                     <td class="text-center text-bold">{{$pais->nombre}}</td>
                                     <td class="text-center">{{$pais->provincias->count()}}</td>
                                     <td class="text-center">{{$pais->created_at->format('d/m/Y')}}</td>

@@ -32,11 +32,9 @@ Localidades registradas
                         <table id="example" class="display" cellspacing="0" width="100%">
                             <thead>
                                 <tr>
-                                    <th class="text-center">ID</th>
                                     <th class="text-center">Nombre</th>
                                     <th class="text-center">Provincia</th>
                                     <th class="text-center">Pais</th>
-
                                     <th class="text-center">Fecha alta</th>
                                     <th class="text-center">Acciones</th>
                                 </tr>
@@ -44,7 +42,6 @@ Localidades registradas
                             <tbody>
                                 @foreach($localidades as $localidad)
                                 <tr>
-                                    <td class="text-center">{{$localidad->id}}</td>
                                     <td class="text-center text-bold">{{$localidad->nombre}}</td>
                                     <td class="text-center">{{$localidad->provincia->nombre}}</td>
                                     <td class="text-center">{{$localidad->provincia->pais->nombre}}</td>

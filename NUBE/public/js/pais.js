@@ -1,5 +1,7 @@
-$("#side-general").addClass("active");
-$("#side-ele-lugares").addClass("active");
+$("#side-general-li").addClass("active");
+$("#side-general-ul").addClass("menu-open");
+$("#side-ele-lugares-ul").addClass("menu-open");
+$("#side-ele-lugares-li").addClass("active");
 $("#side-ele-lugares-paises").addClass("active");
 
 

@@ -32,7 +32,6 @@ Barrios registradas
                         <table id="example" class="display" cellspacing="0" width="100%">
                             <thead>
                                 <tr>
-                                    <th class="text-center">ID</th>
                                     <th class="text-center">Nombre</th>
                                     <th class="text-center">Localidad</th>
                                     <th class="text-center">Provincia</th>
@@ -44,7 +43,6 @@ Barrios registradas
                             <tbody>
                                 @foreach($barrios as $barrio)
                                 <tr>
-                                    <td class="text-center">{{$barrio->id}}</td>
                                     <td class="text-center text-bold">{{$barrio->nombre}}</td>
                                     <td class="text-center">{{$barrio->localidad->nombre}}</td>
                                     <td class="text-center">{{$barrio->localidad->provincia->nombre}}</td>

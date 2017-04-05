@@ -32,10 +32,9 @@ Provincias registradas
                         <table id="example" class="display" cellspacing="0" width="100%">
                             <thead>
                                 <tr>
-                                    <th class="text-center">ID</th>
                                     <th class="text-center">Nombre</th>
-                                    <th class="text-center">Pais</th>
-                                    <th class="text-center">Localidades Asociadas</th>
+                                    <th class="text-center">País perteneciente</th>
+                                    <th class="text-center">Localidades asociadas</th>
                                     <th class="text-center">Fecha alta</th>
                                     <th class="text-center">Acciones</th>
                                 </tr>
@@ -43,7 +42,6 @@ Provincias registradas
                             <tbody>
                                 @foreach($provincias as $provincia)
                                 <tr>
-                                    <td class="text-center">{{$provincia->id}}</td>
                                     <td class="text-center text-bold">{{$provincia->nombre}}</td>
                                     <td class="text-center">{{$provincia->pais->nombre}}</td>
                                     <td class="text-center">{{$provincia->localidades->count()}}</td>

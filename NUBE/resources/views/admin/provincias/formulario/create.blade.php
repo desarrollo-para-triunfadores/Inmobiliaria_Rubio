@@ -15,14 +15,15 @@
                     <div class="form-group">
                         <label>Nombre:</label>
                         <input name="nombre" type="text" maxlength="50" class="form-control" placeholder="campo requerido" required>
-                        <br>
-                        <label>Pais</label>
-                        <select name="pais_id" type="select" maxlength="50" class="form-control" placeholder="campo requerido" required>
+                    </div>                   
+                    <div class="form-group">
+                        <label>País:</label>
+                        <select style="width: 100%"  name="pais_id"  placeholder="campo requerido"  class="select2 form-control">
                             @foreach($paises as $pais)
-                                <option value="{{$pais->id}}" selected="selected">{{$pais->nombre}}</option>
+                            <option value="{{$pais->id}}">{{$pais->nombre}}</option>                                                    
                             @endforeach
-                        </select>
-                    </div>                                                            
+                        </select> 
+                    </div>                                                                            
                     <button id="boton_submit_crear" type="submit" class="btn btn-primary hide"></button>
                 </form>
                 <br>      

@@ -1,6 +1,6 @@
-$("#side-general").addClass("active");
-$("#side-ele-lugares").addClass("active");
-$("#side-ele-lugares-garantes").addClass("active");
+$("#side-inmueble").addClass("active");
+$("#side-inmueble-ul").addClass("menu-open");
+$("#side-ele-garantes").addClass("active");
 
 
 function completar_campos(garante) {

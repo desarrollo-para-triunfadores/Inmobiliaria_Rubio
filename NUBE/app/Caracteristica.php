@@ -4,25 +4,22 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Caracteristica extends Model
-{
-    protected $table =  "caracteristicas";
+class Caracteristica extends Model {
 
-    protected $fillable = ['nombre', 'tipo', 'barrio_id', 'descripcion'];
-    /* tipo: (ambiente, inmueble, barrio) */
+    protected $table = "caracteristicas";
+    
+    protected $fillable = ['nombre', 'tipo_id', 'descripcion'];
 
-
-    public function barrio()
-    {
-        return $this->belongsTo('App\Barrio');
+    public function tipo() {
+        return $this->belongsTo('App\Tipo');
     }
-    public function imueble()
-    {
-        return $this->belongsTo('App\Inmueble');
+
+    public function inmuebles() {
+        return $this->hasMany('App\Inmueble');
     }
-    public function ambiente()
-    {
-        return $this->belongsTo('App\Ambiente');
+
+    public function ambientes() {
+        return $this->hasMany('App\Ambiente');
     }
 
 }
