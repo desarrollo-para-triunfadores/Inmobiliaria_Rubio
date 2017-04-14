@@ -45,12 +45,6 @@
 <!-- DataTables -->
 <link rel="stylesheet" type="text/css" href="{{ asset('plantillas/AdminLTE/plugins/DataTables/media/css/jquery.dataTables.min.css') }}  ">
 
-<!-- wizard -->
-<link type="text/css" rel="stylesheet" href="{{ asset('plantillas/AdminLTE/plugins/bootstrap-wizard/css/bwizard.css') }}  ">
-
-
-
-<link type="text/css" rel="stylesheet" href="{{ asset('css/animate.css') }}  ">
 
 <link type="text/css" rel="stylesheet" href="{{ asset('plantillas/AdminLTE/plugins/jquery-steps-master/css/jquery.steps.css') }}  ">
 

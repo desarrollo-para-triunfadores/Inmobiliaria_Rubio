@@ -66,24 +66,16 @@ $.widget.bridge('uibutton', $.ui.button);
 
 
 
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANzTkkt93m5CSxz1H5fZy18uN_sEERiu4&callback=initMap"></script>
+
 
 
 
 
 <script>
 
-$(function ()
-{
-    $("#wizard").steps({
-        headerTag: "h2",
-        bodyTag: "section",
-        transitionEffect: "slideLeft",
-        onFinished: function (event, currentIndex)
-        {
-            alert("Submitted!");
-        }
-    });
-});
+
 
 $(".select2").select2({
     placeholder: "seleccione una opción"

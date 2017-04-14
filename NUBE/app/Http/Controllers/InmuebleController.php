@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Inmueble;
+use App\Tipo;
+use App\Caracteristica;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
@@ -22,7 +24,11 @@ class InmuebleController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        return view('admin.inmuebles.main');
+        $caracteristicas = Caracteristica::all();
+        $tipos = Tipo::all();
+        return view('admin.inmuebles.main')
+                        ->with('tipos', $tipos)
+                        ->with('caracteristicas', $caracteristicas);
     }
 
     /**

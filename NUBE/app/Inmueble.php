@@ -4,28 +4,55 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Inmueble extends Model
-{
-    protected $table =  "inmuebles";
+class Inmueble extends Model {
 
-    protected $fillable = ['inquilino_id','garante_id','edificio_id','barrio_id','localidad_id', 'condicion', 'precio_compra', 'calle','altura','piso','numero', 'superficie', 'fecha_habilitacion','fecha_fin_contrato','googleMapsLink', 'video_link', 'descripcion', 'disponible' ];
-    // condicion: condicion
-    // googleMapsLink: url de la ubicacion del inmueble en Maps
-    //en caso de no tener barrio el campo localidad id es necesario
-    public function localidad()
-    {
-        return $this->belongsTo('App\Localidad');
+    protected $table = "inmuebles";
+    protected $fillable = [
+        'condicion',
+        'valorVenta',
+        'valorAlquiler',
+        'superficie',
+        'direccion',
+        'piso',
+        'numDepto',
+        'fechaHabilitacion',
+        'fechaFinContrato',
+        'linkVideo',
+        'expensaValor',
+        'expensaDescripcion',
+        'longitud',
+        'latitud',
+        'cantidadAmbientes',
+        'disponible',
+        'descripcion',
+        'tipo_id',
+        'garante_id',
+        'inquilino_id',
+        'barrio_id'
+    ];
+
+    public function garante() {
+        return $this->belongsTo('App\Garante');
     }
 
-
-    public function inmuebles()
-    {
-        return $this->hasMany('App\Inmueble');
+    public function tipo() {
+        return $this->belongsTo('App\Tipo');
     }
 
-    /******** devuelve todos los barrios ingresandole el id de localidad ******/
-    public static function barrios($id){
-        return Barrio::where('localidad_id','=',$id)
-            ->get();
+    public function inquilino() {
+        return $this->belongsTo('App\Inquilino');
     }
+
+    public function barrio() {
+        return $this->belongsTo('App\Barrio');
+    }
+
+    public function ambientes() {
+        return $this->hasMany('App\Ambiente');
+    }
+    
+     public function fotos() {
+        return $this->hasMany('App\imagemInmueble');
+    }
+
 }
