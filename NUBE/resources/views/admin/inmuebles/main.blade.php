@@ -120,9 +120,7 @@ Localidades registradas
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th>Nombre</th>                                               
-                                                <th>Descripción</th>
-                                                <th>Acción</th>                                              
+
                                             </tr>
                                         </tfoot>
                                     </table>

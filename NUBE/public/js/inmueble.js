@@ -15,11 +15,25 @@ $(function ()
         headerTag: "h2",
         bodyTag: "section",
         transitionEffect: "slideLeft",
-        onStepChanged: function (event, currentIndex)
+        onStepChanging: function (event, currentIndex, newIndex)
         {
-            
-            initMap();
+            // Siempre permitir volver para atras
+            if (currentIndex > newIndex)
+            {
+                return true;
+            }
+            if((currentIndex === 0))
+            {
+                return true;
+            }
+            //Validacion de seccion ""
+            if((currentIndex === 1))
+            {
+
+                return true;
+            }
         },
+
         onFinished: function (event, currentIndex)
         {
             alert("CULO!");
@@ -74,7 +88,6 @@ $(document).ready(function () {
 
 
 function initMap() {
-    alert("DEDED");
     var uluru = {lat: -25.363, lng: 131.044};
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 4,

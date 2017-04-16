@@ -14,12 +14,9 @@ class AddInquilinosTable extends Migration
     {
         Schema::create('inquilinos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
-            $table->string('apellido');
-            $table->string('dni');
-            $table->string('fecha_nac');
-            $table->string('telefono');
-            $table->string('descripcion');
+            $table->integer('persona_id');
+            $table->foreign('persona_id')->references('id')->on('personas')->onDelete('cascade');
+            $table->string('descripcion')->nullable();
             $table->timestamps();
         });
     }

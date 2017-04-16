@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Inquilino;
+use App\Persona;
 use App\Provincia;
 use App\Auditoria;
 use Carbon\Carbon;
@@ -48,7 +49,17 @@ class InquilinosController extends Controller
 
     public function store(Request $request)
     {
-        $inquilino = new Inquilino($request->all());
+        /*datos de persona*/
+        $persona = new Persona();
+        $persona->nombre = $request->nombre;
+        $persona->apellido = $request->apellido;
+        $persona->dni = $request->dni;
+        $persona->fecha_nac = $request->fecha_nac;
+        $persona->telefono = $request->telefono;
+        $persona->save();
+        /*****************/
+        $inquilino = new Inquilino();
+        $inquilino->persona_id = $persona->id;
         $inquilino->save();
         Session::flash('message', 'Se ha registrado un nuevo inquilino.');
         return redirect()->route('inquilinos.index');
@@ -73,7 +84,17 @@ class InquilinosController extends Controller
     public function update(Request $request, $id)
     {
         $inquilino = Inquilino::find($id);
-        $inquilino->fill($request->all());
+
+        /*datos de persona*/
+        $persona = Persona::find($inquilino->persona_id);
+        $persona->nombre = $request->nombre;
+        $persona->apellido = $request->apellido;
+        $persona->dni = $request->dni;
+        $persona->fecha_nac = $request->fecha_nac;
+        $persona->telefono = $request->telefono;
+        $persona->save();
+        /*****************/
+        //$inquilino->fill($request->all());
         $inquilino->save();
         Session::flash('message', 'Se ha actualizado la información');
         return redirect()->route('inquilinos.index');

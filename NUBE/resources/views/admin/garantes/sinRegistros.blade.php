@@ -9,7 +9,7 @@
 @endsection
 
 @section('content')
-@include('admin.garantes.create')
+@include('admin.garantes.formulario.create')
 <div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
     <div class="page-header pull-left">
         <div class="page-title">Garantes</div>
@@ -25,11 +25,13 @@
                     </div>
                 </div>                
             </div>                                     
-            <div class="page-content">     
+            {{--
+            <div class="page-content">
                 <div class="page-toolbar">  
                     @include('admin.partes.msjSinRegistros')                                                
                 </div>               
             </div>
+            --}}
         </div>          
     </div>                    
 </div>

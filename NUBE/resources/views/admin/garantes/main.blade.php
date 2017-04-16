@@ -50,11 +50,11 @@ Garantes registradas
                                 @foreach($garantes as $garante)
                                 <tr>
                                     <td class="text-center">{{$garante->id}}</td>
-                                    <td class="text-center text-bold">{{$garante->apellido}}, {{$garante->nombre}}</td>
+                                    <td class="text-center text-bold">{{$garante->persona->apellido}}, {{$garante->persona->nombre}}</td>
                                     <td class="text-center">{{--$garante->inmueble->nombre--}}-</td>
-                                    <td class="text-center">{{$garante->dni}}</td>
-                                    <td class="text-center">{{$garante->fecha_nac}} (edad)</td>
-                                    <td class="text-center">{{$garante->telefono}}</td>
+                                    <td class="text-center">{{$garante->persona->dni}}</td>
+                                    <td class="text-center">{{$garante->persona->fecha_nac  }}    formato de Carbon por defecto:{{ \Carbon\Carbon::now()}} ({{ $garante->persona->getEdad()}} años)</td>
+                                    <td class="text-center">{{$garante->persona->telefono}}</td>
                                     <td class="text-center">{{$garante->domicilio}}</td>
                                     <td class="text-center">{{$garante->localidad->nombre}}</td>
                                     <td class="text-center">{{$garante->localidad->provincia->nombre}}</td>
@@ -70,7 +70,7 @@ Garantes registradas
                         </table>
                     </div> 
                     <div class="box-footer">
-                        <button title="Registrar un país" type="button" id="boton-modal-crear" class="btn btn-primary pull-right" data-toggle="modal" data-target="#modal-crear">
+                        <button title="Registrar un garante de inmueble" type="button" id="boton-modal-crear" class="btn btn-primary pull-right" data-toggle="modal" data-target="#modal-crear">
                             <i class="fa fa-plus-circle"></i> &nbsp;Registrar Garante
                         </button>
                     </div>

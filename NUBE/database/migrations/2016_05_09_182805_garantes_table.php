@@ -14,15 +14,12 @@ class GarantesTable extends Migration
     {
         Schema::create('garantes', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre');
-            $table->string('apellido');
-            $table->string('dni');
-            $table->string('fecha_nac');
-            $table->string('telefono');
-            $table->string('descripcion');
+            $table->integer('persona_id');
+            $table->foreign('persona_id')->references('id')->on('personas')->onDelete('cascade');
+            $table->string('descripcion',500)->nullable();
             $table->integer('localidad_id')->unsigned();
             $table->foreign('localidad_id')->references('id')->on('localidades')->onDelete('cascade');
-            $table->string('domicilio');
+            $table->string('domicilio')->nullable();
 
             $table->timestamps();
         });

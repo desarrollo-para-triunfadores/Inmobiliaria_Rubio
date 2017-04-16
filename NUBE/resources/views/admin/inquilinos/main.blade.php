@@ -1,7 +1,7 @@
 @extends('admin.partes.index')
 
 @section('title')
-Inquilinos registradas
+Inquilinos regisrados
 @endsection
 
 @section('content')
@@ -49,10 +49,10 @@ Inquilinos registradas
                                 @foreach($inquilinos as $inquilino)
                                 <tr>
                                     <td class="text-center">{{$inquilino->id}}</td>
-                                    <td class="text-center text-bold">{{$inquilino->nombre}} {{$inquilino->apellido}}</td>
-                                    <td class="text-center">{{$inquilino->dni}}</td>
-                                    <td class="text-center">{{$inquilino->fecha_nac}} (edad)</td>
-                                    <td class="text-center">{{$inquilino->telefono}}</td>
+                                    <td class="text-center text-bold">{{$inquilino->persona->nombre}} {{$inquilino->persona->apellido}}</td>
+                                    <td class="text-center">{{$inquilino->persona->dni}}</td>
+                                    <td class="text-center">{{$inquilino->persona->fecha_nac}} ({{$inquilino->persona->getEdad()}} años)</td>
+                                    <td class="text-center">{{$inquilino->persona->telefono}}</td>
                                     <td class="text-center">-</td>
                                     <td class="text-center">{{--$inquilino->inmueble->--}} - </td>
                                     <td class="text-center">{{--$inquilino->localidad->provincia->nombre--}}-</td>

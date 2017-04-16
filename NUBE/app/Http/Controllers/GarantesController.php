@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Garante;
 use App\Localidad;
 use App\Auditoria;
+use App\Persona;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Laracasts\Flash\Flash;
@@ -45,10 +46,22 @@ class GarantesController extends Controller
         return view('admin.garantes.create');
     }
 
-
     public function store(Request $request)
     {
-        $garante = new Garante($request->all());
+        /*datos de persona*/
+        $persona = new Persona();
+        $persona->nombre = $request->nombre;
+        $persona->apellido = $request->apellido;
+        $persona->dni = $request->dni;
+        $persona->fecha_nac = $request->fecha_nac;
+        $persona->telefono = $request->telefono;
+        $persona->save();
+        /*****************/
+        $garante = new Garante();
+        $garante->persona_id = $persona->id;
+        $garante->localidad_id = $request->localidad_id;
+        $garante->domicilio = $request->domicilio;
+        $garante->descripcion = $request->descripcion;
         $garante->save();
         Session::flash('message', 'Se ha registrado un nuevo garante.');
         return redirect()->route('garantes.index');
@@ -73,7 +86,16 @@ class GarantesController extends Controller
     public function update(Request $request, $id)
     {
         $garante = Garante::find($id);
-        $garante->fill($request->all());
+        /*datos de persona*/
+        $persona = Persona::find($garante->persona_id);
+        $persona->nombre = $request->nombre;
+        $persona->apellido = $request->apellido;
+        $persona->dni = $request->dni;
+        $persona->fecha_nac = $request->fecha_nac;
+        $persona->telefono = $request->telefono;
+        $persona->save();
+        /*****************/
+        //$garante->fill($request->all());
         $garante->save();
         Session::flash('message', 'Se ha actualizado la información');
         return redirect()->route('garantes.index');

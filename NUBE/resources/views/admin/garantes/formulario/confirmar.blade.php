@@ -18,7 +18,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">volver</button>
-                <button type="button" class="btn btn-outline" onclick="$('#boton_submit_borrar').click()">eliminar Garante</button>
+                <button type="button" class="btn btn-outline" onclick="$('#boton_submit_borrar').click()">Eliminar Garante</button>
             </div>
         </div>
     </div>

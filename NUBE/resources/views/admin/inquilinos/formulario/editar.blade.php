@@ -14,9 +14,55 @@
                     <h3>Detalles del registro</h3>
                     <br>
                     <div class="form-group">
-                        <label>Nombre:</label>
-                        <input id="nombre" name="nombre" type="text" maxlength="50" class="form-control" placeholder="campo requerido" required>
-                    </div>                                             
+                        <div class="col-sm-12 controls">
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <div class="input-icon right">
+                                        <label>Nombre:</label>
+                                        <input id="nombre" name="nombre" type="text" maxlength="50" class="form-control" placeholder="campo requerido" required>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="input-icon right">
+                                        <label>Apellido:</label>
+                                        <input id="apellido" name="apellido" type="text" maxlength="50" class="form-control" placeholder="campo requerido" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-xs-6">
+                                    <div class="input-icon right">
+                                        <label>DNI:</label>
+                                        <input id="dni" name="dni" type="text" maxlength="8" class="form-control" placeholder="campo requerido" required>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="input-icon right">
+                                        <label>Fecha Nacimiento:</label>
+                                        <input id="fecha_nac" name="fecha_nac" type="text" class="form-control" placeholder="campo requerido" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <br>
+                        <label>Inmueble</label>
+                        proximamente..
+                        {{--
+                        <select name="inmueble_id" type="select" maxlength="50" class="form-control" placeholder="campo requerido" required>
+                            @foreach($inmuebles as $inmueble)
+                                <option value="{{$inmueble->id}}" selected="selected">{{$inmueble->varios datos}}</option>
+                            @endforeach
+                        </select>
+                        --}}
+
+                        <br>
+
+                        </input>
+                    </div>
                     <button id="boton_submit_update" type="submit" class="btn btn-primary hide"></button>
                 </form>  
                 <br>               

@@ -3,11 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class Garante extends Model
 {
     protected $table =  "garantes";
-    protected $fillable = ['nombre', 'apellido', 'dni', 'fecha_nac', 'telefono', 'descripcion', 'localidad_id', 'domicilio'];
+    protected $fillable = ['persona_id', 'descripcion', 'localidad_id', 'domicilio'];
 
     public function inmuebles()
     {
@@ -16,5 +17,9 @@ class Garante extends Model
     public function localidad()
     {
         return $this->belongsTo('App\Localidad');
+    }
+    public function persona()
+    {
+        return $this->belongsTo('App\Persona');
     }
 }

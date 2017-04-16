@@ -8,7 +8,7 @@
             </div>
             <div class="modal-body">
                 @include('admin.partes.msj_lista_errores')
-                <form action="/admin/localidades" method="POST">
+                <form action="/admin/barrios" method="POST">
                     <input type="hidden" name="_token" value="{{ csrf_token() }}">                                                           
                     <h3>Detalles del registro</h3>
                     <br>
@@ -23,8 +23,8 @@
                             @endforeach
                         </select>
                         <br>
-                        <label>Es un barrio privado</label>
-                        <input name="privado" type="checkbox" class="form-control" placeholder="campo requerido" >
+                        <label>Es PRIVADO??</label>
+                        <input name="privado" type="checkbox" class="checkbox">
 
                         </input>
                     </div>
@@ -36,7 +36,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">volver</button>
-                <button type="button" class="btn btn-primary" onclick="$('#boton_submit_crear').click()">registrar localidad</button>
+                <button type="button" class="btn btn-primary" onclick="$('#boton_submit_crear').click()">Registrar Barrio</button>
             </div>
         </div>          
     </div>
