@@ -15,31 +15,24 @@ $(function ()
         headerTag: "h2",
         bodyTag: "section",
         transitionEffect: "slideLeft",
-        onStepChanging: function (event, currentIndex, newIndex)
+        onStepChanged: function (event, currentIndex)
         {
-            // Siempre permitir volver para atras
-            if (currentIndex > newIndex)
-            {
-                return true;
+            $(".select3").select2({
+                placeholder: "seleccione una opción"
+            });
+            if (currentIndex === 3) {
+                initMap();
             }
-            if((currentIndex === 0))
-            {
-                return true;
-            }
-            //Validacion de seccion ""
-            if((currentIndex === 1))
-            {
 
-                return true;
-            }
         },
-
         onFinished: function (event, currentIndex)
         {
-            alert("CULO!");
+            $('#enviar_datos').click();
         }
     });
 });
+
+
 
 function agregar_característica() {
     $("#combo option:selected").each(function () {
@@ -74,6 +67,7 @@ function agregar_a_tabla(caracteristica) {
     cell3.innerHTML = '<input type="button" class="borrar" value="Eliminar" />';
     cell4.innerHTML = '<input type="text" name="caracteristica' + caracteristica.id + '" class="hide" value="' + caracteristica.id + '" />';
     caracteristicas_seleccionadas.push(caracteristica.id);
+    $('#cantidad_caracteristicas').val(caracteristicas_seleccionadas.length);
 }
 
 function cerrar_modal_amarillo() { //jaja
@@ -88,7 +82,13 @@ $(document).ready(function () {
 
 
 function initMap() {
-    var uluru = {lat: -25.363, lng: 131.044};
+    $(".select3").select2({
+        placeholder: "seleccione una opción"
+    });
+    var uluru = {
+        lat: -25.363,
+        lng: 131.044
+    };
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 4,
         center: uluru

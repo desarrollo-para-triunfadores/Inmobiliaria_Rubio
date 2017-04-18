@@ -28,7 +28,9 @@ class Inmueble extends Model {
         'tipo_id',
         'garante_id',
         'inquilino_id',
-        'barrio_id'
+        'propietario_id',
+        'barrio_id',
+        'edificio_id'
     ];
 
     public function garante() {
@@ -47,12 +49,20 @@ class Inmueble extends Model {
         return $this->belongsTo('App\Barrio');
     }
 
-    public function ambientes() {
-        return $this->hasMany('App\Ambiente');
+    public function propietario() {
+        return $this->belongsTo('App\Propietario');
     }
     
-     public function fotos() {
-        return $this->hasMany('App\imagemInmueble');
+      public function edificio() {
+        return $this->belongsTo('App\Edificio');
+    }
+
+    public function fotos() {
+        return $this->hasMany('App\ImagemInmueble');
+    }
+    
+     public function caracteristicas() {
+        return $this->hasMany('App\CaracteristicaInmueble');
     }
 
 }

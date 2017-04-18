@@ -5,14 +5,18 @@ namespace App\Http\Controllers;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Inmueble;
+use App\Persona;
 use App\Tipo;
+use App\Barrio;
+use App\Edificio;
+use App\Localidad;
 use App\Caracteristica;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 Use Session;
 
-class InmuebleController extends Controller {
+class InmueblesController extends Controller {
 
     public function __construct() {
         Carbon::setlocale('es'); // Instancio en Español el manejador de fechas de Laravel
@@ -24,10 +28,18 @@ class InmuebleController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        $caracteristicas = Caracteristica::all();
+        $caracteristicas = Caracteristica::all();       
+        $edificios = Edificio::all();
+        $localidades = Localidad::all();
+        $barrios = Barrio::all();
         $tipos = Tipo::all();
+        $personas = Persona::all();
         return view('admin.inmuebles.main')
                         ->with('tipos', $tipos)
+                        ->with('edificios', $edificios)
+                        ->with('localidades', $localidades)
+                        ->with('barrios', $barrios)
+                        ->with('personas', $personas)
                         ->with('caracteristicas', $caracteristicas);
     }
 
@@ -47,7 +59,7 @@ class InmuebleController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request) {
-        //
+        dd($request);
     }
 
     /**

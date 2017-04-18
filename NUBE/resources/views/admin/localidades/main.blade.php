@@ -1,14 +1,14 @@
 @extends('admin.partes.index')
 
 @section('title')
-Localidades registradas
+Localidades
 @endsection
 
 @section('content')
 <div class="content-wrapper" style="min-height: 916px;">
     <section class="content-header">
         <h1>
-            Localidades
+            Municipios
             <small>registros almacenados</small>
         </h1>
         <ol class="breadcrumb">

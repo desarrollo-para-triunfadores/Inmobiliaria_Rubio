@@ -41,6 +41,7 @@ class Persona extends Model
         return $fecha;
         //return Carbon::parse($this->attributes['fecha_nac'])->age;
         */
+        \Carbon\Carbon::now('America/Buenos_Aires')->format('d/m/Y');
         return Carbon::parse($this->attributes['fecha_nac'])->age;
     }
 }

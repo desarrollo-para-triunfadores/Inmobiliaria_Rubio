@@ -34,10 +34,8 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::resource('barrios', 'BarriosController');
     Route::resource('tipos_caracteristicas', 'TiposController');
     Route::resource('caracteristicas', 'CaracteristicasController');
-    Route::resource('inmuebles','InmuebleController');
-    
-    
-    
+    Route::resource('inmuebles','InmueblesController');
+
     Route::resource('edificios', 'EdificiosController');
 
     Route::resource('garantes', 'GarantesController');
