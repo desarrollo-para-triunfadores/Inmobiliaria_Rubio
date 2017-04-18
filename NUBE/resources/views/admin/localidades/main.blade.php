@@ -32,7 +32,7 @@ Localidades
                         <table id="example" class="display" cellspacing="0" width="100%">
                             <thead>
                                 <tr>
-                                    <th class="text-center">Nombre</th>
+                                    <th class="text-center">Municipio</th>
                                     <th class="text-center">Provincia</th>
                                     <th class="text-center">Pais</th>
                                     <th class="text-center">Fecha alta</th>

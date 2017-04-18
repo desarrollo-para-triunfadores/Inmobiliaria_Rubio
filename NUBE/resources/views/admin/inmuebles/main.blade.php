@@ -1,7 +1,7 @@
 @extends('admin.partes.index')
 
 @section('title')
-    Localidades registradas
+    Inmuebles registradas
 @endsection
 
 @section('content')
